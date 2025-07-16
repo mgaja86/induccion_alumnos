@@ -8,9 +8,11 @@ import { ActionCard } from "@/components/action-card";
 import { ProgressProvider, useProgress } from "@/context/progress-context";
 import { OnboardingProgressBar } from "@/components/progress-bar";
 import { WelcomeVideoModal } from "@/components/welcome-video-modal";
+import { CampusVideoModal } from "@/components/campus-video-modal";
 
 function WelcomeContent() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const [isCampusModalOpen, setIsCampusModalOpen] = useState(false);
   const { completedSteps, completeStep } = useProgress();
 
   const handleOpenVideo = () => {
@@ -19,9 +21,19 @@ function WelcomeContent() {
 
   const handleCloseVideo = () => {
     setIsVideoModalOpen(false);
-    // Only mark as complete when closing, not on every open
     if (!completedSteps.has('welcomeVideo')) {
       completeStep('welcomeVideo');
+    }
+  };
+
+  const handleOpenCampusVideo = () => {
+    setIsCampusModalOpen(true);
+  };
+
+  const handleCloseCampusVideo = () => {
+    setIsCampusModalOpen(false);
+    if (!completedSteps.has('campusAccess')) {
+      completeStep('campusAccess');
     }
   };
 
@@ -70,7 +82,7 @@ function WelcomeContent() {
               <div className="lg:col-span-2">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
                   <ActionCard icon={Video} title="Video de Bienvenida" onClick={handleOpenVideo} isCompleted={completedSteps.has('welcomeVideo')} />
-                  <ActionCard icon={LayoutDashboard} title="Ingresa a tu campus" onClick={() => completeStep('campusAccess')} isCompleted={completedSteps.has('campusAccess')} />
+                  <ActionCard icon={LayoutDashboard} title="Ingresa a tu campus" onClick={handleOpenCampusVideo} isCompleted={completedSteps.has('campusAccess')} />
                   <ActionCard icon={BookText} title="Plan Docente" onClick={() => completeStep('teachingPlan')} isCompleted={completedSteps.has('teachingPlan')} />
                   <ActionCard icon={PhoneForwarded} title="Contacto Docente" onClick={() => completeStep('teacherContact')} isCompleted={completedSteps.has('teacherContact')} />
                   <ActionCard icon={Library} title="Contenidos" onClick={() => completeStep('contents')} isCompleted={completedSteps.has('contents')} />
@@ -88,6 +100,7 @@ function WelcomeContent() {
         </footer>
       </div>
       <WelcomeVideoModal isOpen={isVideoModalOpen} onClose={handleCloseVideo} />
+      <CampusVideoModal isOpen={isCampusModalOpen} onClose={handleCloseCampusVideo} />
     </>
   );
 }
