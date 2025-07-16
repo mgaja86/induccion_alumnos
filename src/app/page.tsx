@@ -63,14 +63,14 @@ export default function WelcomePage() {
                     <Video className="w-10 h-10 text-isep-accent" />
                   </div>
                   <div className="px-8 pb-8">
-                    <h4 className="font-bold text-2xl mb-2 text-isep-primary">2. Accede al Campus Virtual</h4>
-                    <p className="text-gray-400 mb-6 max-w-xl mx-auto">Tu centro de aprendizaje. Mira este video para aprender a ingresar y encontrar todo lo que necesitas:</p>
+                    <h4 className="font-bold text-2xl mb-2 text-isep-primary">2. Conócenos Mejor</h4>
+                    <p className="text-gray-400 mb-6 max-w-xl mx-auto">Mira nuestro video institucional para descubrir más sobre nuestra comunidad, valores y lo que nos hace únicos.</p>
                   </div>
                   <div className="aspect-video w-full overflow-hidden rounded-b-lg">
                     <iframe
                       className="w-full h-full"
-                      src="https://iframe.mediadelivery.net/play/273279/09f7b914-ecc1-4317-b5f8-6fbd1850606c"
-                      title="Cómo ingresar al campus virtual"
+                      src="https://www.youtube.com/embed/rQuSiR_wKxY"
+                      title="Video Institucional Universidad Isep"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                     ></iframe>
