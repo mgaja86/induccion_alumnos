@@ -21,10 +21,9 @@ export const WelcomeVideoModal = ({ isOpen, onClose }: WelcomeVideoModalProps) =
             Este video es el punto de partida de un viaje increíble. ¡Estamos emocionados de tenerte y no podemos esperar a ver todo lo que lograrás!
           </p>
         </DialogHeader>
-        <div className="aspect-video rounded-lg overflow-hidden my-4 ring-2 ring-isep-accent/50">
+        <div className="relative pt-[56.25%] rounded-lg overflow-hidden my-4 ring-2 ring-isep-accent/50">
           <iframe
-            width="100%"
-            height="100%"
+            className="absolute top-0 left-0 w-full h-full"
             src="https://www.youtube.com/embed/rQuSiR_wKxY?autoplay=1"
             title="YouTube video player"
             frameBorder="0"
