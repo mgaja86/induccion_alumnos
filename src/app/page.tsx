@@ -57,7 +57,7 @@ export default function WelcomePage() {
               </div>
 
               {/* Step 2 */}
-              <div className="relative w-full max-w-5xl opacity-0 animate-timeline-item-fade-in z-10" style={{ animationDelay: '300ms' }}>
+              <div className="relative w-full max-w-7xl opacity-0 animate-timeline-item-fade-in z-10" style={{ animationDelay: '300ms' }}>
                 <div className="relative bg-isep-dark shadow-lg shadow-isep-primary/20 pt-16 rounded-lg border border-isep-primary/30 text-center">
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-isep-dark border-4 border-isep-accent flex items-center justify-center">
                     <Video className="w-10 h-10 text-isep-accent" />
