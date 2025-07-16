@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { CalendarCheck, Compass, GraduationCap, Library, Mail, Phone, User, Video } from "lucide-react";
+import Image from "next/image";
+import { CalendarCheck, Compass, Library, Mail, Phone, User, Video } from "lucide-react";
 import { MadeWithDyad } from "@/components/made-with-dyad";
 import { ActionCard } from "@/components/action-card";
 import { ProgressProvider, useProgress } from "@/context/progress-context";
@@ -39,7 +40,13 @@ function WelcomeContent() {
               
               {/* Left Column (Welcome Message) */}
               <div className="lg:col-span-1 text-center lg:text-left">
-                <GraduationCap className="h-16 w-16 text-isep-accent mb-4 mx-auto lg:mx-0" />
+                <Image 
+                  src="https://f005.backblazeb2.com/file/elearning-img/Isotipo-UISEP-W+1.png"
+                  alt="Isotipo Universidad Isep"
+                  width={64}
+                  height={64}
+                  className="h-16 w-16 mb-4 mx-auto lg:mx-0"
+                />
                 <h2 className="text-4xl font-extrabold mb-4 leading-tight">
                   ¡Bienvenido a la Familia Isep!
                 </h2>
