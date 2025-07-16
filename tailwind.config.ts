@@ -14,6 +14,7 @@ export default {
           dark: '#1B156B',
           primary: '#7848FF',
           accent: '#FF7F1D',
+          'deep-purple': '#371C82',
         },
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

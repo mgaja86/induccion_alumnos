@@ -18,7 +18,7 @@ export default function WelcomePage() {
 
       <main className="container mx-auto px-6 py-8">
         {/* Main content area with curved background */}
-        <div className="bg-gradient-to-br from-isep-primary to-purple-700 text-white p-8 sm:p-12 rounded-3xl shadow-2xl shadow-purple-500/20">
+        <div className="bg-gradient-to-br from-isep-deep-purple to-isep-primary text-white p-8 sm:p-12 rounded-3xl shadow-2xl shadow-[#7848FF]/30">
           <div className="grid lg:grid-cols-3 gap-12 items-center">
             
             {/* Left Column (Welcome Message) */}
