@@ -43,8 +43,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     user,
   };
 
-  // No renderizar la app hasta que se haya cargado la sesión para evitar parpadeos
-  return <AuthContext.Provider value={value}>{!loading && children}</AuthContext.Provider>;
+  // Renderizamos los hijos directamente para mejorar la estabilidad en el entorno de desarrollo.
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
 
 export const useAuth = () => {
