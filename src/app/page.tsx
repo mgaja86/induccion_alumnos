@@ -23,9 +23,13 @@ function WelcomeContent() {
       <div className="bg-gray-100 dark:bg-isep-dark min-h-screen font-[family-name:var(--font-geist-sans)]">
         {/* Header */}
         <header className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="text-3xl font-bold text-isep-dark dark:text-white">
-            Universidad <span className="text-isep-primary">Isep</span>
-          </h1>
+          <Image
+            src="https://f005.backblazeb2.com/file/elearning-img/Logo-UISEP-Slogan-Color+1.png"
+            alt="Logo Universidad Isep con Slogan"
+            width={240}
+            height={58}
+            priority
+          />
           <a href="#" className="bg-white dark:bg-gray-800 shadow-md hover:shadow-lg text-isep-dark dark:text-white font-bold py-2 px-4 rounded-full transition-all flex items-center gap-2">
             <User className="w-5 h-5" />
             <span>Portal del Estudiante</span>
