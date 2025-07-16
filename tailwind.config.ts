@@ -10,6 +10,11 @@ export default {
   theme: {
   	extend: {
   		colors: {
+        isep: {
+          dark: '#1B156B',
+          primary: '#7848FF',
+          accent: '#FF7F1D',
+        },
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
