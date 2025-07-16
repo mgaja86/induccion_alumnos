@@ -41,30 +41,30 @@ export default function WelcomePage() {
           </div>
 
           <div className="container mx-auto px-6">
-            <div className="relative flex flex-col gap-12 pl-14">
+            <div className="relative flex flex-col items-center gap-20">
               {/* Vertical Line */}
-              <div className="absolute left-5 top-0 w-1 h-full bg-isep-primary/30 rounded-full"></div>
+              <div className="absolute top-0 w-1 h-full bg-isep-primary/30 rounded-full z-0"></div>
 
               {/* Step 1 */}
-              <div className="relative opacity-0 animate-timeline-item-fade-in" style={{ animationDelay: '100ms' }}>
-                <div className="absolute left-5 top-0 w-10 h-10 rounded-full bg-isep-dark border-2 border-isep-accent flex items-center justify-center transform -translate-x-1/2">
-                  <Compass className="w-5 h-5 text-isep-accent" />
-                </div>
-                <div className="bg-gray-900/20 p-6 rounded-lg border border-isep-primary/30">
-                  <h4 className="font-bold text-xl mb-2 text-isep-primary">1. Jornada de Orientación</h4>
+              <div className="relative w-full max-w-3xl opacity-0 animate-timeline-item-fade-in z-10" style={{ animationDelay: '100ms' }}>
+                <div className="relative bg-gray-900/20 p-8 pt-16 rounded-lg border border-isep-primary/30 text-center">
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-isep-dark border-4 border-isep-accent flex items-center justify-center">
+                    <Compass className="w-10 h-10 text-isep-accent" />
+                  </div>
+                  <h4 className="font-bold text-2xl mb-2 text-isep-primary">1. Jornada de Orientación</h4>
                   <p className="text-gray-400">Únete al evento de bienvenida virtual. Conocerás a tus profesores, tutores y compañeros. ¡Es el punto de partida perfecto!</p>
                 </div>
               </div>
 
               {/* Step 2 */}
-              <div className="relative opacity-0 animate-timeline-item-fade-in" style={{ animationDelay: '300ms' }}>
-                <div className="absolute left-5 top-0 w-10 h-10 rounded-full bg-isep-dark border-2 border-isep-accent flex items-center justify-center transform -translate-x-1/2">
-                  <Video className="w-5 h-5 text-isep-accent" />
-                </div>
-                <div className="bg-gray-900/20 p-6 rounded-lg border border-isep-primary/30">
-                  <h4 className="font-bold text-xl mb-2 text-isep-primary">2. Accede al Campus Virtual</h4>
-                  <p className="text-gray-400 mb-4">Tu centro de aprendizaje. Mira este video para aprender a ingresar y encontrar todo lo que necesitas:</p>
-                  <div className="aspect-video overflow-hidden rounded-lg border border-isep-accent/30">
+              <div className="relative w-full max-w-3xl opacity-0 animate-timeline-item-fade-in z-10" style={{ animationDelay: '300ms' }}>
+                <div className="relative bg-gray-900/20 p-8 pt-16 rounded-lg border border-isep-primary/30 text-center">
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-isep-dark border-4 border-isep-accent flex items-center justify-center">
+                    <Video className="w-10 h-10 text-isep-accent" />
+                  </div>
+                  <h4 className="font-bold text-2xl mb-2 text-isep-primary">2. Accede al Campus Virtual</h4>
+                  <p className="text-gray-400 mb-6 max-w-xl mx-auto">Tu centro de aprendizaje. Mira este video para aprender a ingresar y encontrar todo lo que necesitas:</p>
+                  <div className="aspect-video overflow-hidden rounded-lg border border-isep-accent/30 max-w-2xl mx-auto">
                     <iframe
                       className="w-full h-full"
                       src="https://iframe.mediadelivery.net/play/273279/09f7b914-ecc1-4317-b5f8-6fbd1850606c"
@@ -77,23 +77,23 @@ export default function WelcomePage() {
               </div>
 
               {/* Step 3 */}
-              <div className="relative opacity-0 animate-timeline-item-fade-in" style={{ animationDelay: '500ms' }}>
-                <div className="absolute left-5 top-0 w-10 h-10 rounded-full bg-isep-dark border-2 border-isep-accent flex items-center justify-center transform -translate-x-1/2">
-                  <CalendarCheck className="w-5 h-5 text-isep-accent" />
-                </div>
-                <div className="bg-gray-900/20 p-6 rounded-lg border border-isep-primary/30">
-                  <h4 className="font-bold text-xl mb-2 text-isep-primary">3. Revisa tu Horario y Calendario</h4>
+              <div className="relative w-full max-w-3xl opacity-0 animate-timeline-item-fade-in z-10" style={{ animationDelay: '500ms' }}>
+                <div className="relative bg-gray-900/20 p-8 pt-16 rounded-lg border border-isep-primary/30 text-center">
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-isep-dark border-4 border-isep-accent flex items-center justify-center">
+                    <CalendarCheck className="w-10 h-10 text-isep-accent" />
+                  </div>
+                  <h4 className="font-bold text-2xl mb-2 text-isep-primary">3. Revisa tu Horario y Calendario</h4>
                   <p className="text-gray-400">Encuentra tus horarios de clase, fechas de exámenes y el calendario académico completo dentro del portal. ¡Organízate desde el primer día!</p>
                 </div>
               </div>
 
               {/* Step 4 */}
-              <div className="relative opacity-0 animate-timeline-item-fade-in" style={{ animationDelay: '700ms' }}>
-                <div className="absolute left-5 top-0 w-10 h-10 rounded-full bg-isep-dark border-2 border-isep-accent flex items-center justify-center transform -translate-x-1/2">
-                  <Library className="w-5 h-5 text-isep-accent" />
-                </div>
-                <div className="bg-gray-900/20 p-6 rounded-lg border border-isep-primary/30">
-                  <h4 className="font-bold text-xl mb-2 text-isep-primary">4. Explora los Recursos</h4>
+              <div className="relative w-full max-w-3xl opacity-0 animate-timeline-item-fade-in z-10" style={{ animationDelay: '700ms' }}>
+                <div className="relative bg-gray-900/20 p-8 pt-16 rounded-lg border border-isep-primary/30 text-center">
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-isep-dark border-4 border-isep-accent flex items-center justify-center">
+                    <Library className="w-10 h-10 text-isep-accent" />
+                  </div>
+                  <h4 className="font-bold text-2xl mb-2 text-isep-primary">4. Explora los Recursos</h4>
                   <p className="text-gray-400">Descubre la biblioteca digital, los servicios de bienestar estudiantil y los clubes a los que te puedes unir para enriquecer tu experiencia universitaria.</p>
                 </div>
               </div>
