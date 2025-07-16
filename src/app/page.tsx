@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { CalendarCheck, Compass, Library, Mail, Phone, User, Video } from "lucide-react";
+import { Award, BookText, LayoutDashboard, Library, Link, Receipt, PhoneForwarded, User, Video } from "lucide-react";
 import { MadeWithDyad } from "@/components/made-with-dyad";
 import { ActionCard } from "@/components/action-card";
 import { ProgressProvider, useProgress } from "@/context/progress-context";
@@ -13,9 +13,16 @@ function WelcomeContent() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const { completedSteps, completeStep } = useProgress();
 
+  const handleOpenVideo = () => {
+    setIsVideoModalOpen(true);
+  };
+
   const handleCloseVideo = () => {
     setIsVideoModalOpen(false);
-    completeStep('welcomeVideo');
+    // Only mark as complete when closing, not on every open
+    if (!completedSteps.has('welcomeVideo')) {
+      completeStep('welcomeVideo');
+    }
   };
 
   return (
@@ -61,13 +68,15 @@ function WelcomeContent() {
 
               {/* Right Column (Action Cards) */}
               <div className="lg:col-span-2">
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
-                  <ActionCard icon={Video} title="Video de Bienvenida" onClick={() => setIsVideoModalOpen(true)} isCompleted={completedSteps.has('welcomeVideo')} />
-                  <ActionCard icon={Compass} title="Jornada de Orientación" isCompleted={completedSteps.has('orientation')} />
-                  <ActionCard icon={CalendarCheck} title="Revisa tu Horario" isCompleted={completedSteps.has('schedule')} />
-                  <ActionCard icon={Library} title="Explora Recursos" isCompleted={completedSteps.has('resources')} />
-                  <ActionCard icon={Mail} title="Contacta a Soporte" isCompleted={completedSteps.has('support')} />
-                  <ActionCard icon={Phone} title="Llámanos" isCompleted={completedSteps.has('contact')} />
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+                  <ActionCard icon={Video} title="Video de Bienvenida" onClick={handleOpenVideo} isCompleted={completedSteps.has('welcomeVideo')} />
+                  <ActionCard icon={LayoutDashboard} title="Ingresa a tu campus" onClick={() => completeStep('campusAccess')} isCompleted={completedSteps.has('campusAccess')} />
+                  <ActionCard icon={BookText} title="Plan Docente" onClick={() => completeStep('teachingPlan')} isCompleted={completedSteps.has('teachingPlan')} />
+                  <ActionCard icon={PhoneForwarded} title="Contacto Docente" onClick={() => completeStep('teacherContact')} isCompleted={completedSteps.has('teacherContact')} />
+                  <ActionCard icon={Library} title="Contenidos" onClick={() => completeStep('contents')} isCompleted={completedSteps.has('contents')} />
+                  <ActionCard icon={Link} title="Enlaces de Interés" onClick={() => completeStep('linksAndMaterials')} isCompleted={completedSteps.has('linksAndMaterials')} />
+                  <ActionCard icon={Award} title="Encuesta y Certificado" onClick={() => completeStep('surveyAndCertificate')} isCompleted={completedSteps.has('surveyAndCertificate')} />
+                  <ActionCard icon={Receipt} title="Módulo de Facturación" onClick={() => completeStep('billingModule')} isCompleted={completedSteps.has('billingModule')} />
                 </div>
               </div>
             </div>

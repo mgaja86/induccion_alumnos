@@ -5,11 +5,13 @@ import React, { createContext, useContext, useState, useMemo, ReactNode } from '
 // Define los pasos que el estudiante debe completar
 const OnboardingSteps = [
   'welcomeVideo',
-  'orientation',
-  'schedule',
-  'resources',
-  'support',
-  'contact'
+  'campusAccess',
+  'teachingPlan',
+  'teacherContact',
+  'contents',
+  'linksAndMaterials',
+  'surveyAndCertificate',
+  'billingModule'
 ] as const;
 
 type Step = typeof OnboardingSteps[number];
@@ -26,7 +28,16 @@ export const ProgressProvider = ({ children }: { children: ReactNode }) => {
   const [completedSteps, setCompletedSteps] = useState<Set<Step>>(new Set());
 
   const completeStep = (step: Step) => {
-    setCompletedSteps(prev => new Set(prev).add(step));
+    setCompletedSteps(prev => {
+      const newSteps = new Set(prev);
+      // Toggle completion
+      if (newSteps.has(step)) {
+        newSteps.delete(step);
+      } else {
+        newSteps.add(step);
+      }
+      return newSteps;
+    });
   };
 
   const progress = useMemo(() => {
