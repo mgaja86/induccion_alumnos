@@ -1,0 +1,57 @@
+"use client";
+
+import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import { SupabaseClient, Session, User } from '@supabase/supabase-js';
+import { createClient } from '@/integrations/supabase/client';
+
+interface AuthContextType {
+  supabase: SupabaseClient;
+  session: Session | null;
+  user: User | null;
+}
+
+const AuthContext = createContext<AuthContextType | undefined>(undefined);
+
+export const AuthProvider = ({ children }: { children: ReactNode }) => {
+  const [supabase] = useState(() => createClient());
+  const [session, setSession] = useState<Session | null>(null);
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const getSession = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      setSession(session);
+      setUser(session?.user ?? null);
+      setLoading(false);
+    };
+
+    getSession();
+
+    const { data: authListener } = supabase.auth.onAuthStateChange((event, session) => {
+      setSession(session);
+      setUser(session?.user ?? null);
+    });
+
+    return () => {
+      authListener.subscription.unsubscribe();
+    };
+  }, [supabase]);
+
+  const value = {
+    supabase,
+    session,
+    user,
+  };
+
+  // No renderizar la app hasta que se haya cargado la sesión para evitar parpadeos
+  return <AuthContext.Provider value={value}>{!loading && children}</AuthContext.Provider>;
+};
+
+export const useAuth = () => {
+  const context = useContext(AuthContext);
+  if (context === undefined) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
+};
