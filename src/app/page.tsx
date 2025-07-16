@@ -33,18 +33,18 @@ function WelcomeContent() {
 
         <main className="container mx-auto px-6 py-8">
           <OnboardingProgressBar />
-          {/* Main content area with curved background */}
-          <div className="bg-gradient-to-br from-isep-deep-purple to-isep-primary text-white p-8 sm:p-12 rounded-3xl shadow-2xl shadow-[#7848FF]/30">
+          {/* Main content area with new retro style */}
+          <div className="bg-gradient-to-br from-isep-dark via-isep-deep-purple to-isep-primary text-white p-8 sm:p-12 rounded-3xl shadow-2xl shadow-[#7848FF]/40">
             <div className="grid lg:grid-cols-3 gap-12 items-center">
               
               {/* Left Column (Welcome Message) */}
               <div className="lg:col-span-1 text-center lg:text-left">
-                <GraduationCap className="h-16 w-16 text-isep-accent mb-4 mx-auto lg:mx-0" />
-                <h2 className="text-4xl font-extrabold mb-4 leading-tight">
-                  ¡Bienvenido a la Familia Isep!
+                <GraduationCap className="h-16 w-16 text-isep-accent mb-4 mx-auto lg:mx-0 drop-shadow-[0_0_8px_rgba(255,127,29,0.7)]" />
+                <h2 className="text-4xl font-extrabold mb-4 leading-tight drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">
+                  ¡Desbloquea Tu Potencial!
                 </h2>
                 <p className="text-lg text-purple-200">
-                  Tu viaje hacia el éxito profesional comienza hoy. Completa los siguientes pasos para empezar.
+                  Cada paso que das te acerca a tus metas. ¡Completa tu inducción y prepárate para un futuro brillante y lleno de éxitos!
                 </p>
               </div>
 
