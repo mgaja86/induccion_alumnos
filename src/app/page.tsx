@@ -16,17 +16,28 @@ export default function WelcomePage() {
 
       <main className="container mx-auto px-6 py-16 sm:py-24">
         {/* Hero Section */}
-        <section className="mb-20 text-center">
-          <GraduationCap className="mx-auto h-16 w-16 text-isep-accent mb-4" />
-          <h2 className="text-4xl sm:text-6xl font-extrabold mb-4 leading-tight">
-            ¡Bienvenido a la Familia Isep!
-          </h2>
-          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Estamos increíblemente felices de que te unas a nuestra comunidad. Tu viaje hacia el éxito profesional comienza hoy.
-          </p>
-          <button className="bg-isep-accent hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105">
-            Comienza tu Aventura
-          </button>
+        <section className="mb-20 grid lg:grid-cols-2 gap-12 items-center">
+          <div className="text-center lg:text-left">
+            <GraduationCap className="mx-auto lg:mx-0 h-16 w-16 text-isep-accent mb-4" />
+            <h2 className="text-4xl sm:text-6xl font-extrabold mb-4 leading-tight">
+              ¡Bienvenido a la Familia Isep!
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-300 max-w-xl mx-auto lg:mx-0 mb-8">
+              Estamos increíblemente felices de que te unas a nuestra comunidad. Tu viaje hacia el éxito profesional comienza hoy.
+            </p>
+            <button className="bg-isep-accent hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105">
+              Comienza tu Aventura
+            </button>
+          </div>
+          <div className="aspect-video w-full shadow-lg shadow-isep-primary/20 rounded-lg border border-isep-primary/30">
+            <iframe
+              className="w-full h-full rounded-lg"
+              src="https://www.youtube.com/embed/rQuSiR_wKxY"
+              title="Video Institucional Universidad Isep"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
         </section>
 
         {/* Next Steps Section */}
@@ -57,24 +68,13 @@ export default function WelcomePage() {
               </div>
 
               {/* Step 2 */}
-              <div className="relative w-full max-w-7xl opacity-0 animate-timeline-item-fade-in z-10" style={{ animationDelay: '300ms' }}>
-                <div className="relative bg-isep-dark shadow-lg shadow-isep-primary/20 pt-16 rounded-lg border border-isep-primary/30 text-center">
+              <div className="relative w-full max-w-3xl opacity-0 animate-timeline-item-fade-in z-10" style={{ animationDelay: '300ms' }}>
+                <div className="relative bg-isep-dark shadow-lg shadow-isep-primary/20 p-8 pt-16 rounded-lg border border-isep-primary/30 text-center">
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-isep-dark border-4 border-isep-accent flex items-center justify-center">
-                    <Video className="w-10 h-10 text-isep-accent" />
+                    <CalendarCheck className="w-10 h-10 text-isep-accent" />
                   </div>
-                  <div className="px-8 pb-8">
-                    <h4 className="font-bold text-2xl mb-2 text-isep-primary">2. Conócenos Mejor</h4>
-                    <p className="text-gray-400 mb-6 max-w-xl mx-auto">Mira nuestro video institucional para descubrir más sobre nuestra comunidad, valores y lo que nos hace únicos.</p>
-                  </div>
-                  <div className="aspect-video w-full overflow-hidden rounded-b-lg">
-                    <iframe
-                      className="w-full h-full"
-                      src="https://www.youtube.com/embed/rQuSiR_wKxY"
-                      title="Video Institucional Universidad Isep"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    ></iframe>
-                  </div>
+                  <h4 className="font-bold text-2xl mb-2 text-isep-primary">2. Revisa tu Horario y Calendario</h4>
+                  <p className="text-gray-400">Encuentra tus horarios de clase, fechas de exámenes y el calendario académico completo dentro del portal. ¡Organízate desde el primer día!</p>
                 </div>
               </div>
 
@@ -82,20 +82,9 @@ export default function WelcomePage() {
               <div className="relative w-full max-w-3xl opacity-0 animate-timeline-item-fade-in z-10" style={{ animationDelay: '500ms' }}>
                 <div className="relative bg-isep-dark shadow-lg shadow-isep-primary/20 p-8 pt-16 rounded-lg border border-isep-primary/30 text-center">
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-isep-dark border-4 border-isep-accent flex items-center justify-center">
-                    <CalendarCheck className="w-10 h-10 text-isep-accent" />
-                  </div>
-                  <h4 className="font-bold text-2xl mb-2 text-isep-primary">3. Revisa tu Horario y Calendario</h4>
-                  <p className="text-gray-400">Encuentra tus horarios de clase, fechas de exámenes y el calendario académico completo dentro del portal. ¡Organízate desde el primer día!</p>
-                </div>
-              </div>
-
-              {/* Step 4 */}
-              <div className="relative w-full max-w-3xl opacity-0 animate-timeline-item-fade-in z-10" style={{ animationDelay: '700ms' }}>
-                <div className="relative bg-isep-dark shadow-lg shadow-isep-primary/20 p-8 pt-16 rounded-lg border border-isep-primary/30 text-center">
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-isep-dark border-4 border-isep-accent flex items-center justify-center">
                     <Library className="w-10 h-10 text-isep-accent" />
                   </div>
-                  <h4 className="font-bold text-2xl mb-2 text-isep-primary">4. Explora los Recursos</h4>
+                  <h4 className="font-bold text-2xl mb-2 text-isep-primary">3. Explora los Recursos</h4>
                   <p className="text-gray-400">Descubre la biblioteca digital, los servicios de bienestar estudiantil y los clubes a los que te puedes unir para enriquecer tu experiencia universitaria.</p>
                 </div>
               </div>
