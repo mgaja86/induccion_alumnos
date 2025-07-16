@@ -47,7 +47,7 @@ export default function WelcomePage() {
 
               {/* Step 1 */}
               <div className="relative w-full max-w-3xl opacity-0 animate-timeline-item-fade-in z-10" style={{ animationDelay: '100ms' }}>
-                <div className="relative bg-gray-900/20 p-8 pt-16 rounded-lg border border-isep-primary/30 text-center">
+                <div className="relative bg-gray-900 p-8 pt-16 rounded-lg border border-isep-primary/30 text-center">
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-isep-dark border-4 border-isep-accent flex items-center justify-center">
                     <Compass className="w-10 h-10 text-isep-accent" />
                   </div>
@@ -58,13 +58,13 @@ export default function WelcomePage() {
 
               {/* Step 2 */}
               <div className="relative w-full max-w-3xl opacity-0 animate-timeline-item-fade-in z-10" style={{ animationDelay: '300ms' }}>
-                <div className="relative bg-gray-900/20 p-8 pt-16 rounded-lg border border-isep-primary/30 text-center">
+                <div className="relative bg-gray-900 p-8 pt-16 rounded-lg border border-isep-primary/30 text-center">
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-isep-dark border-4 border-isep-accent flex items-center justify-center">
                     <Video className="w-10 h-10 text-isep-accent" />
                   </div>
                   <h4 className="font-bold text-2xl mb-2 text-isep-primary">2. Accede al Campus Virtual</h4>
                   <p className="text-gray-400 mb-6 max-w-xl mx-auto">Tu centro de aprendizaje. Mira este video para aprender a ingresar y encontrar todo lo que necesitas:</p>
-                  <div className="aspect-video overflow-hidden rounded-lg border border-isep-accent/30 max-w-2xl mx-auto">
+                  <div className="aspect-video overflow-hidden rounded-lg border border-isep-accent/30 mx-auto">
                     <iframe
                       className="w-full h-full"
                       src="https://iframe.mediadelivery.net/play/273279/09f7b914-ecc1-4317-b5f8-6fbd1850606c"
@@ -78,7 +78,7 @@ export default function WelcomePage() {
 
               {/* Step 3 */}
               <div className="relative w-full max-w-3xl opacity-0 animate-timeline-item-fade-in z-10" style={{ animationDelay: '500ms' }}>
-                <div className="relative bg-gray-900/20 p-8 pt-16 rounded-lg border border-isep-primary/30 text-center">
+                <div className="relative bg-gray-900 p-8 pt-16 rounded-lg border border-isep-primary/30 text-center">
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-isep-dark border-4 border-isep-accent flex items-center justify-center">
                     <CalendarCheck className="w-10 h-10 text-isep-accent" />
                   </div>
@@ -89,7 +89,7 @@ export default function WelcomePage() {
 
               {/* Step 4 */}
               <div className="relative w-full max-w-3xl opacity-0 animate-timeline-item-fade-in z-10" style={{ animationDelay: '700ms' }}>
-                <div className="relative bg-gray-900/20 p-8 pt-16 rounded-lg border border-isep-primary/30 text-center">
+                <div className="relative bg-gray-900 p-8 pt-16 rounded-lg border border-isep-primary/30 text-center">
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-isep-dark border-4 border-isep-accent flex items-center justify-center">
                     <Library className="w-10 h-10 text-isep-accent" />
                   </div>
