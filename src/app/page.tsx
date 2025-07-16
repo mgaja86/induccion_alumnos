@@ -1,115 +1,54 @@
-import { CalendarCheck, Compass, GraduationCap, Library, Mail, Phone, Video } from "lucide-react";
+import { CalendarCheck, Compass, GraduationCap, Library, Mail, Phone, User, Video } from "lucide-react";
 import { MadeWithDyad } from "@/components/made-with-dyad";
+import { ActionCard } from "@/components/action-card";
 
 export default function WelcomePage() {
   return (
-    <div className="bg-isep-dark text-white min-h-screen font-[family-name:var(--font-geist-sans)]">
+    <div className="bg-gray-100 dark:bg-isep-dark min-h-screen font-[family-name:var(--font-geist-sans)]">
       {/* Header */}
       <header className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold">
-          Universidad <span className="text-isep-accent">Isep</span>
+        <h1 className="text-3xl font-bold text-isep-dark dark:text-white">
+          Universidad <span className="text-isep-primary">Isep</span>
         </h1>
-        <a href="#" className="bg-isep-primary hover:bg-purple-500 text-white font-bold py-2 px-4 rounded-lg transition-colors">
-          Portal del Estudiante
+        <a href="#" className="bg-white dark:bg-gray-800 shadow-md hover:shadow-lg text-isep-dark dark:text-white font-bold py-2 px-4 rounded-full transition-all flex items-center gap-2">
+          <User className="w-5 h-5" />
+          <span>Portal del Estudiante</span>
         </a>
       </header>
 
-      <main className="container mx-auto px-6 py-16 sm:py-24">
-        {/* Hero Section */}
-        <section className="mb-20 grid lg:grid-cols-2 gap-12 items-center">
-          <div className="text-center lg:text-left">
-            <GraduationCap className="mx-auto lg:mx-0 h-16 w-16 text-isep-accent mb-4" />
-            <h2 className="text-4xl sm:text-6xl font-extrabold mb-4 leading-tight">
-              ¡Bienvenido a la Familia Isep!
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-xl mx-auto lg:mx-0 mb-8">
-              Estamos increíblemente felices de que te unas a nuestra comunidad. Tu viaje hacia el éxito profesional comienza hoy.
-            </p>
-            <button className="bg-isep-accent hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105">
-              Comienza tu Aventura
-            </button>
-          </div>
-          <div className="aspect-video w-full shadow-lg shadow-isep-primary/20 rounded-lg border border-isep-primary/30">
-            <iframe
-              className="w-full h-full rounded-lg"
-              src="https://www.youtube.com/embed/rQuSiR_wKxY"
-              title="Video Institucional Universidad Isep"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </section>
+      <main className="container mx-auto px-6 py-8">
+        {/* Main content area with curved background */}
+        <div className="bg-gradient-to-br from-isep-primary to-purple-700 text-white p-8 sm:p-12 rounded-3xl shadow-2xl shadow-purple-500/20">
+          <div className="grid lg:grid-cols-3 gap-12 items-center">
+            
+            {/* Left Column (Welcome Message) */}
+            <div className="lg:col-span-1 text-center lg:text-left">
+              <GraduationCap className="h-16 w-16 text-isep-accent mb-4 mx-auto lg:mx-0" />
+              <h2 className="text-4xl font-extrabold mb-4 leading-tight">
+                ¡Bienvenido a la Familia Isep!
+              </h2>
+              <p className="text-lg text-purple-200">
+                Tu viaje hacia el éxito profesional comienza hoy. Explora los siguientes pasos para empezar.
+              </p>
+            </div>
 
-        {/* Next Steps Section */}
-        <section className="py-20">
-          <div className="text-center mb-16 px-6">
-            <h3 className="text-4xl sm:text-5xl font-bold mb-3 bg-gradient-to-r from-isep-primary to-isep-accent text-transparent bg-clip-text">
-              Tu Aventura Isep Comienza Ahora
-            </h3>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              Sigue estos pasos para un inicio de semestre exitoso y sin contratiempos.
-            </p>
-          </div>
-
-          <div className="container mx-auto px-6">
-            <div className="relative flex flex-col items-center gap-20">
-              {/* Vertical Line */}
-              <div className="absolute top-0 w-1 h-full bg-isep-primary/30 rounded-full z-0"></div>
-
-              {/* Step 1 */}
-              <div className="relative w-full max-w-3xl opacity-0 animate-timeline-item-fade-in z-10" style={{ animationDelay: '100ms' }}>
-                <div className="relative bg-isep-dark shadow-lg shadow-isep-primary/20 p-8 pt-16 rounded-lg border border-isep-primary/30 text-center">
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-isep-dark border-4 border-isep-accent flex items-center justify-center">
-                    <Compass className="w-10 h-10 text-isep-accent" />
-                  </div>
-                  <h4 className="font-bold text-2xl mb-2 text-isep-primary">1. Jornada de Orientación</h4>
-                  <p className="text-gray-400">Únete al evento de bienvenida virtual. Conocerás a tus profesores, tutores y compañeros. ¡Es el punto de partida perfecto!</p>
-                </div>
-              </div>
-
-              {/* Step 2 */}
-              <div className="relative w-full max-w-3xl opacity-0 animate-timeline-item-fade-in z-10" style={{ animationDelay: '300ms' }}>
-                <div className="relative bg-isep-dark shadow-lg shadow-isep-primary/20 p-8 pt-16 rounded-lg border border-isep-primary/30 text-center">
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-isep-dark border-4 border-isep-accent flex items-center justify-center">
-                    <CalendarCheck className="w-10 h-10 text-isep-accent" />
-                  </div>
-                  <h4 className="font-bold text-2xl mb-2 text-isep-primary">2. Revisa tu Horario y Calendario</h4>
-                  <p className="text-gray-400">Encuentra tus horarios de clase, fechas de exámenes y el calendario académico completo dentro del portal. ¡Organízate desde el primer día!</p>
-                </div>
-              </div>
-
-              {/* Step 3 */}
-              <div className="relative w-full max-w-3xl opacity-0 animate-timeline-item-fade-in z-10" style={{ animationDelay: '500ms' }}>
-                <div className="relative bg-isep-dark shadow-lg shadow-isep-primary/20 p-8 pt-16 rounded-lg border border-isep-primary/30 text-center">
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-isep-dark border-4 border-isep-accent flex items-center justify-center">
-                    <Library className="w-10 h-10 text-isep-accent" />
-                  </div>
-                  <h4 className="font-bold text-2xl mb-2 text-isep-primary">3. Explora los Recursos</h4>
-                  <p className="text-gray-400">Descubre la biblioteca digital, los servicios de bienestar estudiantil y los clubes a los que te puedes unir para enriquecer tu experiencia universitaria.</p>
-                </div>
+            {/* Right Column (Action Cards) */}
+            <div className="lg:col-span-2">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+                <ActionCard icon={Compass} title="Jornada de Orientación" />
+                <ActionCard icon={CalendarCheck} title="Revisa tu Horario" />
+                <ActionCard icon={Library} title="Explora Recursos" />
+                <ActionCard icon={Video} title="Video Institucional" />
+                <ActionCard icon={Mail} title="Contacta a Soporte" />
+                <ActionCard icon={Phone} title="Llámanos" />
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-black/20 text-center py-8 mt-16">
-        <div className="container mx-auto px-6">
-          <h4 className="text-xl font-bold mb-4">¿Necesitas Ayuda?</h4>
-          <p className="text-gray-400 mb-4">Nuestro equipo de soporte está aquí para ti.</p>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 mb-6">
-            <a href="mailto:soporte@isep.edu" className="flex items-center gap-2 hover:text-isep-accent transition-colors">
-              <Mail className="h-5 w-5" />
-              soporte@isep.edu
-            </a>
-            <a href="tel:+123456789" className="flex items-center gap-2 hover:text-isep-accent transition-colors">
-              <Phone className="h-5 w-5" />
-              +1 (234) 567-89
-            </a>
-          </div>
-          <MadeWithDyad />
-        </div>
+      <footer className="text-center py-8">
+        <MadeWithDyad />
       </footer>
     </div>
   );
