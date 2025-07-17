@@ -6,7 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { GraduationCap, Clock, MessageSquare, KeyRound } from "lucide-react";
+import { GraduationCap, Clock, MessageSquare, KeyRound, Users } from "lucide-react";
 
 export const FaqSection = () => {
   return (
@@ -69,7 +69,7 @@ export const FaqSection = () => {
               </p>
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-3" className="border-b-0">
+          <AccordionItem value="item-3">
             <AccordionTrigger className="text-lg font-semibold text-isep-dark dark:text-white hover:no-underline">
               <div className="flex items-center gap-3 text-left">
                 <KeyRound className="w-8 h-8 text-isep-primary flex-shrink-0" />
@@ -96,6 +96,26 @@ export const FaqSection = () => {
                 <li>Ingresa tu correo electrónico y revisa tu bandeja de entrada.</li>
                 <li>Busca un correo con el asunto "Restablecimiento de contraseña" y sigue las instrucciones paso a paso.</li>
                 <li>Si no ves el correo en unos minutos, revisa la carpeta de spam o correo no deseado. A veces se esconde ahí. 😅</li>
+              </ol>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-4" className="border-b-0">
+            <AccordionTrigger className="text-lg font-semibold text-isep-dark dark:text-white hover:no-underline">
+              <div className="flex items-center gap-3 text-left">
+                <Users className="w-8 h-8 text-isep-primary flex-shrink-0" />
+                <span>¿Cómo ingresar a Microsoft Teams?</span>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="text-base text-gray-600 dark:text-gray-300 pt-4 pl-12">
+              <p className="mb-4">
+                Para acceder a Microsoft Teams, es necesario utilizar las credenciales proporcionadas en tu correo de bienvenida. Recuerda que el dominio de tu correo institucional es: <span className="font-semibold text-isep-dark dark:text-white">@alumnisep.com</span>.
+              </p>
+              <h4 className="font-semibold text-isep-dark dark:text-white mb-2">Pasos para ingresar:</h4>
+              <ol className="list-decimal pl-5 space-y-2">
+                <li>Ubica tu correo de bienvenida en la bandeja de entrada, correo no deseado o spam de tu email.</li>
+                <li>Copia tu usuario y contraseña proporcionados en el correo.</li>
+                <li>Accede a Microsoft Teams desde el navegador o la aplicación.</li>
+                <li>Inicia sesión con las credenciales indicadas.</li>
               </ol>
             </AccordionContent>
           </AccordionItem>
