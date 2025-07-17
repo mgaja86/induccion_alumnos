@@ -14,6 +14,7 @@ import { TeachingPlanVideoModal } from "@/components/teaching-plan-video-modal";
 import { TeacherContactVideoModal } from "@/components/teacher-contact-video-modal";
 import { LinksMaterialsVideoModal } from "@/components/links-materials-video-modal";
 import { SurveyCertificateVideoModal } from "@/components/survey-certificate-video-modal";
+import { BillingVideoModal } from "@/components/billing-video-modal";
 
 function WelcomeContent() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
@@ -22,6 +23,7 @@ function WelcomeContent() {
   const [isTeacherContactModalOpen, setIsTeacherContactModalOpen] = useState(false);
   const [isLinksModalOpen, setIsLinksModalOpen] = useState(false);
   const [isSurveyModalOpen, setIsSurveyModalOpen] = useState(false);
+  const [isBillingModalOpen, setIsBillingModalOpen] = useState(false);
   const { completedSteps, completeStep } = useProgress();
 
   const handleOpenVideo = () => setIsVideoModalOpen(true);
@@ -58,6 +60,12 @@ function WelcomeContent() {
   const handleCloseSurveyVideo = () => {
     setIsSurveyModalOpen(false);
     if (!completedSteps.has('surveyAndCertificate')) completeStep('surveyAndCertificate');
+  };
+
+  const handleOpenBillingVideo = () => setIsBillingModalOpen(true);
+  const handleCloseBillingVideo = () => {
+    setIsBillingModalOpen(false);
+    if (!completedSteps.has('billingModule')) completeStep('billingModule');
   };
 
   return (
@@ -112,7 +120,7 @@ function WelcomeContent() {
                   <ActionCard icon={Library} title="Contenidos" onClick={() => completeStep('contents')} isCompleted={completedSteps.has('contents')} />
                   <ActionCard icon={Link} title="Enlaces de Interés" onClick={handleOpenLinksVideo} isCompleted={completedSteps.has('linksAndMaterials')} />
                   <ActionCard icon={Award} title="Encuesta y Certificado" onClick={handleOpenSurveyVideo} isCompleted={completedSteps.has('surveyAndCertificate')} />
-                  <ActionCard icon={Receipt} title="Módulo de Facturación" onClick={() => completeStep('billingModule')} isCompleted={completedSteps.has('billingModule')} />
+                  <ActionCard icon={Receipt} title="Módulo de Facturación" onClick={handleOpenBillingVideo} isCompleted={completedSteps.has('billingModule')} />
                 </div>
               </div>
             </div>
@@ -131,6 +139,7 @@ function WelcomeContent() {
       <TeacherContactVideoModal isOpen={isTeacherContactModalOpen} onClose={handleCloseTeacherContactVideo} />
       <LinksMaterialsVideoModal isOpen={isLinksModalOpen} onClose={handleCloseLinksVideo} />
       <SurveyCertificateVideoModal isOpen={isSurveyModalOpen} onClose={handleCloseSurveyVideo} />
+      <BillingVideoModal isOpen={isBillingModalOpen} onClose={handleCloseBillingVideo} />
     </>
   );
 }
