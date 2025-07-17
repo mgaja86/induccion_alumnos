@@ -15,6 +15,8 @@ import { TeacherContactVideoModal } from "@/components/teacher-contact-video-mod
 import { LinksMaterialsVideoModal } from "@/components/links-materials-video-modal";
 import { SurveyCertificateVideoModal } from "@/components/survey-certificate-video-modal";
 import { BillingVideoModal } from "@/components/billing-video-modal";
+import { CertificatesSection } from "@/components/certificates-section";
+import { EvaluationSection } from "@/components/evaluation-section";
 
 function WelcomeContent() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
@@ -128,6 +130,8 @@ function WelcomeContent() {
         </main>
 
         <FaqSection />
+        <CertificatesSection />
+        <EvaluationSection />
 
         <footer className="text-center py-8">
           {/* Made with Dyad removed */}
