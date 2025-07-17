@@ -10,6 +10,7 @@ import { OnboardingProgressBar } from "@/components/progress-bar";
 import { WelcomeVideoModal } from "@/components/welcome-video-modal";
 import { CampusVideoModal } from "@/components/campus-video-modal";
 import { FaqSection } from "@/components/faq-section";
+import { RectorWelcome } from "@/components/rector-welcome";
 
 function WelcomeContent() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
@@ -57,6 +58,7 @@ function WelcomeContent() {
         </header>
 
         <main className="container mx-auto px-6 py-8">
+          <RectorWelcome />
           <OnboardingProgressBar />
           {/* Main content area with curved background */}
           <div className="bg-gradient-to-br from-isep-deep-purple to-isep-primary text-white p-8 sm:p-12 rounded-3xl shadow-2xl shadow-[#7848FF]/30">
@@ -72,7 +74,7 @@ function WelcomeContent() {
                   className="h-16 w-16 mb-4 mx-auto lg:mx-0"
                 />
                 <h2 className="text-4xl font-extrabold mb-4 leading-tight">
-                  ¡Bienvenido a la Familia Isep!
+                  Completa tu Onboarding
                 </h2>
                 <p className="text-lg text-purple-200">
                   Tu viaje hacia el éxito profesional comienza hoy. Completa los siguientes pasos para empezar.
