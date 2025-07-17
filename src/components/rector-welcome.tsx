@@ -8,7 +8,7 @@ export const RectorWelcome = () => {
       <div className="grid md:grid-cols-5 items-center">
         <div className="md:col-span-2 h-full">
           <Image
-            src="https://f005.backblazeb2.com/file/elearning-img/rector-isep.jpeg"
+            src="https://f005.backblazeb2.com/file/files-Uchat/imagen+(3).jpeg"
             alt="Rector Marc Gaja"
             width={400}
             height={400}
