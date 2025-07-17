@@ -9,6 +9,7 @@ import { ProgressProvider, useProgress } from "@/context/progress-context";
 import { OnboardingProgressBar } from "@/components/progress-bar";
 import { WelcomeVideoModal } from "@/components/welcome-video-modal";
 import { CampusVideoModal } from "@/components/campus-video-modal";
+import { FaqSection } from "@/components/faq-section";
 
 function WelcomeContent() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
@@ -94,6 +95,8 @@ function WelcomeContent() {
             </div>
           </div>
         </main>
+
+        <FaqSection />
 
         <footer className="text-center py-8">
           <MadeWithDyad />
