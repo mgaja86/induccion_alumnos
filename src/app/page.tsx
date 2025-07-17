@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Award, BookText, LayoutDashboard, Library, Link, Receipt, PhoneForwarded, User, Video } from "lucide-react";
-import { MadeWithDyad } from "@/components/made-with-dyad";
 import { ActionCard } from "@/components/action-card";
 import { ProgressProvider, useProgress } from "@/context/progress-context";
 import { OnboardingProgressBar } from "@/components/progress-bar";
@@ -11,32 +10,30 @@ import { WelcomeVideoModal } from "@/components/welcome-video-modal";
 import { CampusVideoModal } from "@/components/campus-video-modal";
 import { FaqSection } from "@/components/faq-section";
 import { RectorWelcome } from "@/components/rector-welcome";
+import { TeachingPlanVideoModal } from "@/components/teaching-plan-video-modal";
 
 function WelcomeContent() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const [isCampusModalOpen, setIsCampusModalOpen] = useState(false);
+  const [isTeachingPlanModalOpen, setIsTeachingPlanModalOpen] = useState(false);
   const { completedSteps, completeStep } = useProgress();
 
-  const handleOpenVideo = () => {
-    setIsVideoModalOpen(true);
-  };
-
+  const handleOpenVideo = () => setIsVideoModalOpen(true);
   const handleCloseVideo = () => {
     setIsVideoModalOpen(false);
-    if (!completedSteps.has('welcomeVideo')) {
-      completeStep('welcomeVideo');
-    }
+    if (!completedSteps.has('welcomeVideo')) completeStep('welcomeVideo');
   };
 
-  const handleOpenCampusVideo = () => {
-    setIsCampusModalOpen(true);
-  };
-
+  const handleOpenCampusVideo = () => setIsCampusModalOpen(true);
   const handleCloseCampusVideo = () => {
     setIsCampusModalOpen(false);
-    if (!completedSteps.has('campusAccess')) {
-      completeStep('campusAccess');
-    }
+    if (!completedSteps.has('campusAccess')) completeStep('campusAccess');
+  };
+
+  const handleOpenTeachingPlanVideo = () => setIsTeachingPlanModalOpen(true);
+  const handleCloseTeachingPlanVideo = () => {
+    setIsTeachingPlanModalOpen(false);
+    if (!completedSteps.has('teachingPlan')) completeStep('teachingPlan');
   };
 
   return (
@@ -86,7 +83,7 @@ function WelcomeContent() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
                   <ActionCard icon={Video} title="Video de Bienvenida" onClick={handleOpenVideo} isCompleted={completedSteps.has('welcomeVideo')} />
                   <ActionCard icon={LayoutDashboard} title="Ingresa a tu campus" onClick={handleOpenCampusVideo} isCompleted={completedSteps.has('campusAccess')} />
-                  <ActionCard icon={BookText} title="Plan Docente" onClick={() => completeStep('teachingPlan')} isCompleted={completedSteps.has('teachingPlan')} />
+                  <ActionCard icon={BookText} title="Plan Docente" onClick={handleOpenTeachingPlanVideo} isCompleted={completedSteps.has('teachingPlan')} />
                   <ActionCard icon={PhoneForwarded} title="Contacto Docente" onClick={() => completeStep('teacherContact')} isCompleted={completedSteps.has('teacherContact')} />
                   <ActionCard icon={Library} title="Contenidos" onClick={() => completeStep('contents')} isCompleted={completedSteps.has('contents')} />
                   <ActionCard icon={Link} title="Enlaces de Interés" onClick={() => completeStep('linksAndMaterials')} isCompleted={completedSteps.has('linksAndMaterials')} />
@@ -101,11 +98,12 @@ function WelcomeContent() {
         <FaqSection />
 
         <footer className="text-center py-8">
-          <MadeWithDyad />
+          {/* Made with Dyad removed */}
         </footer>
       </div>
       <WelcomeVideoModal isOpen={isVideoModalOpen} onClose={handleCloseVideo} />
       <CampusVideoModal isOpen={isCampusModalOpen} onClose={handleCloseCampusVideo} />
+      <TeachingPlanVideoModal isOpen={isTeachingPlanModalOpen} onClose={handleCloseTeachingPlanVideo} />
     </>
   );
 }
