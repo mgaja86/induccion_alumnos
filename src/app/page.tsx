@@ -12,12 +12,16 @@ import { FaqSection } from "@/components/faq-section";
 import { RectorWelcome } from "@/components/rector-welcome";
 import { TeachingPlanVideoModal } from "@/components/teaching-plan-video-modal";
 import { TeacherContactVideoModal } from "@/components/teacher-contact-video-modal";
+import { LinksMaterialsVideoModal } from "@/components/links-materials-video-modal";
+import { SurveyCertificateVideoModal } from "@/components/survey-certificate-video-modal";
 
 function WelcomeContent() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const [isCampusModalOpen, setIsCampusModalOpen] = useState(false);
   const [isTeachingPlanModalOpen, setIsTeachingPlanModalOpen] = useState(false);
   const [isTeacherContactModalOpen, setIsTeacherContactModalOpen] = useState(false);
+  const [isLinksModalOpen, setIsLinksModalOpen] = useState(false);
+  const [isSurveyModalOpen, setIsSurveyModalOpen] = useState(false);
   const { completedSteps, completeStep } = useProgress();
 
   const handleOpenVideo = () => setIsVideoModalOpen(true);
@@ -42,6 +46,18 @@ function WelcomeContent() {
   const handleCloseTeacherContactVideo = () => {
     setIsTeacherContactModalOpen(false);
     if (!completedSteps.has('teacherContact')) completeStep('teacherContact');
+  };
+
+  const handleOpenLinksVideo = () => setIsLinksModalOpen(true);
+  const handleCloseLinksVideo = () => {
+    setIsLinksModalOpen(false);
+    if (!completedSteps.has('linksAndMaterials')) completeStep('linksAndMaterials');
+  };
+
+  const handleOpenSurveyVideo = () => setIsSurveyModalOpen(true);
+  const handleCloseSurveyVideo = () => {
+    setIsSurveyModalOpen(false);
+    if (!completedSteps.has('surveyAndCertificate')) completeStep('surveyAndCertificate');
   };
 
   return (
@@ -94,8 +110,8 @@ function WelcomeContent() {
                   <ActionCard icon={BookText} title="Plan Docente" onClick={handleOpenTeachingPlanVideo} isCompleted={completedSteps.has('teachingPlan')} />
                   <ActionCard icon={PhoneForwarded} title="Contacto Docente" onClick={handleOpenTeacherContactVideo} isCompleted={completedSteps.has('teacherContact')} />
                   <ActionCard icon={Library} title="Contenidos" onClick={() => completeStep('contents')} isCompleted={completedSteps.has('contents')} />
-                  <ActionCard icon={Link} title="Enlaces de Interés" onClick={() => completeStep('linksAndMaterials')} isCompleted={completedSteps.has('linksAndMaterials')} />
-                  <ActionCard icon={Award} title="Encuesta y Certificado" onClick={() => completeStep('surveyAndCertificate')} isCompleted={completedSteps.has('surveyAndCertificate')} />
+                  <ActionCard icon={Link} title="Enlaces de Interés" onClick={handleOpenLinksVideo} isCompleted={completedSteps.has('linksAndMaterials')} />
+                  <ActionCard icon={Award} title="Encuesta y Certificado" onClick={handleOpenSurveyVideo} isCompleted={completedSteps.has('surveyAndCertificate')} />
                   <ActionCard icon={Receipt} title="Módulo de Facturación" onClick={() => completeStep('billingModule')} isCompleted={completedSteps.has('billingModule')} />
                 </div>
               </div>
@@ -113,6 +129,8 @@ function WelcomeContent() {
       <CampusVideoModal isOpen={isCampusModalOpen} onClose={handleCloseCampusVideo} />
       <TeachingPlanVideoModal isOpen={isTeachingPlanModalOpen} onClose={handleCloseTeachingPlanVideo} />
       <TeacherContactVideoModal isOpen={isTeacherContactModalOpen} onClose={handleCloseTeacherContactVideo} />
+      <LinksMaterialsVideoModal isOpen={isLinksModalOpen} onClose={handleCloseLinksVideo} />
+      <SurveyCertificateVideoModal isOpen={isSurveyModalOpen} onClose={handleCloseSurveyVideo} />
     </>
   );
 }
