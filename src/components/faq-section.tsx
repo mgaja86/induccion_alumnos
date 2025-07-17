@@ -6,7 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { GraduationCap, Clock, MessageSquare } from "lucide-react";
+import { GraduationCap, Clock, MessageSquare, KeyRound } from "lucide-react";
 
 export const FaqSection = () => {
   return (
@@ -46,7 +46,7 @@ export const FaqSection = () => {
               </div>
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-2" className="border-b-0">
+          <AccordionItem value="item-2">
             <AccordionTrigger className="text-lg font-semibold text-isep-dark dark:text-white hover:no-underline">
               <div className="flex items-center gap-3 text-left">
                 <MessageSquare className="w-8 h-8 text-isep-primary flex-shrink-0" />
@@ -67,6 +67,36 @@ export const FaqSection = () => {
               <p className="mb-4">
                 En el mismo espacio, encontrarás un agente disponible para responder tus dudas académicas. Este agente está disponible 24 horas al día, 7 días a la semana, por llamada, para ofrecerte respuestas inmediatas y resolver tus inquietudes.
               </p>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-3" className="border-b-0">
+            <AccordionTrigger className="text-lg font-semibold text-isep-dark dark:text-white hover:no-underline">
+              <div className="flex items-center gap-3 text-left">
+                <KeyRound className="w-8 h-8 text-isep-primary flex-shrink-0" />
+                <span>Problemas de acceso a la plataforma, restablecer contraseña</span>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="text-base text-gray-600 dark:text-gray-300 pt-4 pl-12">
+              <p className="mb-4">
+                Primero, es importante que revises que tu conexión a internet sea estable y que estés ingresando desde un navegador actualizado como Google Chrome, Mozilla Firefox o Safari.
+              </p>
+              <p className="mb-4">
+                Si ya lo intentaste y sigue sin funcionar, prueba ingresando desde una ventana en modo incógnito.
+              </p>
+              <p className="mb-4">
+                Verifica que estás ingresando en el enlace correcto de la plataforma: <a href="https://app.universidadisep.com/" target="_blank" rel="noopener noreferrer" className="text-isep-primary hover:underline font-semibold">https://app.universidadisep.com/</a>
+              </p>
+              <h4 className="font-semibold text-isep-dark dark:text-white mb-2">Restablecimiento de Contraseña</h4>
+              <p className="mb-4">
+                Si no recuerdas tu contraseña o no la reconoce:
+              </p>
+              <ol className="list-decimal pl-5 space-y-2 mb-4">
+                <li>Ve a la página de inicio de sesión del campus.</li>
+                <li>Haz clic en "¿Olvidaste tu contraseña?".</li>
+                <li>Ingresa tu correo electrónico y revisa tu bandeja de entrada.</li>
+                <li>Busca un correo con el asunto "Restablecimiento de contraseña" y sigue las instrucciones paso a paso.</li>
+                <li>Si no ves el correo en unos minutos, revisa la carpeta de spam o correo no deseado. A veces se esconde ahí. 😅</li>
+              </ol>
             </AccordionContent>
           </AccordionItem>
         </Accordion>
