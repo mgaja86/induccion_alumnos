@@ -95,7 +95,7 @@ function OnboardingDashboard() {
         <main className="container mx-auto px-6 py-8">
           <OnboardingProgressBar />
           {/* Main content area with curved background */}
-          <div className="bg-gradient-to-br from-isep-deep-purple to-isep-primary text-white p-8 sm:p-12 rounded-3xl shadow-2xl shadow-[#7848FF]/30 opacity-0 animate-scale-in">
+          <div className="bg-gradient-to-br from-isep-deep-purple to-isep-primary text-white p-8 sm:p-12 rounded-3xl shadow-2xl shadow-[#7848FF]/30 opacity-0 animate-zoom-in" style={{ animationDelay: '300ms' }}>
             <div className="grid lg:grid-cols-3 gap-12 items-center">
               
               {/* Left Column (Welcome Message) */}
@@ -125,7 +125,7 @@ function OnboardingDashboard() {
                       title={card.title} 
                       onClick={card.onClick} 
                       isCompleted={completedSteps.has(card.step)}
-                      style={{ animationDelay: `${index * 100}ms` }}
+                      style={{ animationDelay: `${500 + index * 100}ms` }}
                     />
                   ))}
                 </div>

@@ -9,27 +9,33 @@ import { Rocket } from "lucide-react";
 
 export default function HomePage() {
   const router = useRouter();
-  const [isNavigating, setIsNavigating] = useState(false);
+  const [isExiting, setIsExiting] = useState(false);
 
   const handleNavigate = () => {
-    setIsNavigating(true);
+    setIsExiting(true);
     setTimeout(() => {
       router.push('/onboarding');
-    }, 700); // Duración de la animación
+    }, 600); // Match animation duration
   };
 
   return (
     <>
       {/* Pantalla de transición animada */}
       <div
-        className={`fixed top-0 left-0 z-50 flex h-full w-full items-center justify-center bg-isep-dark transition-opacity duration-700 ease-in-out ${
-          isNavigating ? "opacity-100" : "opacity-0 pointer-events-none"
+        className={`fixed top-0 left-0 z-50 flex h-full w-full items-center justify-center bg-isep-dark transition-opacity duration-300 ${
+          isExiting ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
-        <Rocket className="h-16 w-16 animate-pulse text-isep-accent" />
+        <div className="animate-zoom-in">
+          <Rocket className="h-16 w-16 animate-pulse text-isep-accent" />
+        </div>
       </div>
 
-      <div className="bg-gray-100 dark:bg-isep-dark min-h-screen font-[family-name:var(--font-geist-sans)]">
+      <div
+        className={`bg-gray-100 dark:bg-isep-dark min-h-screen font-[family-name:var(--font-geist-sans)] ${
+          isExiting ? "animate-zoom-out" : ""
+        }`}
+      >
         {/* Header */}
         <header className="container mx-auto px-6 py-6 flex justify-center items-center border-b border-gray-200 dark:border-isep-deep-purple/50">
           <Image
