@@ -56,12 +56,12 @@ export default function HomePage() {
               className="group relative bg-isep-accent hover:bg-isep-accent/90 text-isep-dark font-bold text-xl px-12 py-8 rounded-full transition-transform hover:scale-105 shadow-lg shadow-isep-accent/30 overflow-hidden"
             >
               <div className="flex items-center justify-center">
-                <Rocket className="w-7 h-7 mr-3 transition-transform duration-500 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-72" />
+                <Rocket className="w-8 h-8 mr-3 transition-transform duration-500 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-72" />
                 <span className="transition-opacity duration-300 group-hover:opacity-0">
                   Iniciar mi aventura con Isep
                 </span>
                 <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  ¡Despegando!
+                  Potenciando tu futuro
                 </span>
               </div>
             </Button>
