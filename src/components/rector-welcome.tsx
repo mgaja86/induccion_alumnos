@@ -1,25 +1,31 @@
 "use client";
 
 import Image from "next/image";
+import { Quote } from "lucide-react";
 
 export const RectorWelcome = () => {
   return (
-    <div className="bg-white dark:bg-isep-deep-purple/30 rounded-3xl shadow-lg overflow-hidden mb-8 p-8 sm:p-10">
-      <div className="flex flex-col items-center text-center">
-        <div className="mb-8">
-          <Image
-            src="https://f005.backblazeb2.com/file/files-Uchat/imagen+(3).jpeg"
-            alt="Director General Marc Gaja"
-            width={192}
-            height={192}
-            className="rounded-full object-cover w-40 h-40 sm:w-48 sm:h-48 ring-4 ring-isep-primary ring-offset-4 ring-offset-white dark:ring-offset-isep-deep-purple/30"
-          />
+    <div className="bg-white dark:bg-isep-deep-purple/30 rounded-3xl shadow-lg overflow-hidden mb-8 p-8 sm:p-12">
+      <div className="max-w-4xl mx-auto text-center">
+        <Image
+          src="https://f005.backblazeb2.com/file/files-Uchat/imagen+(3).jpeg"
+          alt="Director General Marc Gaja"
+          width={160}
+          height={160}
+          className="rounded-full object-cover w-32 h-32 sm:w-40 sm:h-40 mx-auto ring-4 ring-isep-primary ring-offset-4 ring-offset-white dark:ring-offset-isep-deep-purple/30"
+        />
+        <div className="mt-4">
+          <p className="font-bold text-xl text-isep-dark dark:text-white">
+            Marc Gaja
+          </p>
+          <p className="text-md text-gray-500 dark:text-gray-400">
+            Director General, Universidad ISEP
+          </p>
         </div>
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-isep-primary mb-6">
-            Un Mensaje de Nuestro Director General
-          </h2>
-          <div className="text-gray-700 dark:text-gray-300 space-y-4 text-base text-left sm:text-center">
+
+        <div className="relative mt-10">
+          <Quote className="absolute -top-6 -left-6 w-20 h-20 text-isep-primary/10 dark:text-isep-primary/20" />
+          <div className="text-gray-700 dark:text-gray-300 space-y-4 text-base text-left sm:text-justify relative">
             <p>
               Queridas y queridos estudiantes,
             </p>
@@ -33,27 +39,22 @@ export const RectorWelcome = () => {
               En ISEP nos mueve la idea de hacer las cosas de manera distinta. Somos una institución que no se conforma con lo tradicional, que busca nuevas formas de enseñar, de conectar, de inspirar. Y ustedes están aquí porque comparten esa visión. Porque no se conforman. Porque quieren marcar la diferencia.
             </p>
             <p>
-              Hoy quiero felicitarles, sinceramente. Porque decidir formarse no es solo llenar un requisito, es apostar por ustedes mismos, por su propósito, por su futuro. Y hacerlo en una universidad como la nuestra significa que están dispuestos a desafiar lo convencional y construir algo nuevo con su conocimiento, su experiencia y su pasión.
+              Hoy quiero felicitarles, sinceramente. Porque decidir formarse no es solo llenar un requisito, es apostar por ustedes mismos, por su propósito, por su futuro. Y hacerlo en una universidad como la nuestra significa que están dispuestos y dispuestas a desafiar lo convencional y construir algo nuevo con su conocimiento, su experiencia y su pasión.
             </p>
             <p>
-              Sé que el primer día puede venir con nervios, preguntas o incertidumbre. Pero también viene con fuerza, con ilusión y con la certeza de que están en el lugar correcto. A partir de hoy, cada clase, cada actividad, cada esfuerzo, será parte de una transformación profunda. No están solos en este proceso: están acompañados por una comunidad que cree en ustedes.
+              Sé que el primer día puede venir con nervios, preguntas o incertidumbre. Pero también viene con fuerza, con ilusión y con la certeza de que están en el lugar correcto. A partir de hoy, cada clase, cada actividad, cada esfuerzo, será parte de una transformación profunda. No están solos ni solas en este proceso: están acompañados y acompañadas por una comunidad que cree en ustedes.
             </p>
             <p>
-              Este es su momento. Este es su espacio. Sean curiosos, sean constantes, y sobre todo, sean valientes. Porque las personas que cambian el mundo comienzan así: decidiendo dar un primer paso.
+              Este es su momento. Este es su espacio. Sean curiosos, curiosas, sean constantes, y sobre todo, sean valientes. Porque las personas que cambian el mundo comienzan así: decidiendo dar un primer paso.
             </p>
             <p>
-              Bienvenidos a Universidad ISEP. Estamos orgullosos de tenerlos aquí.
+              Bienvenidos y bienvenidas a Universidad ISEP. Estamos orgullosos y orgullosas de tenerles aquí.
             </p>
-            <p className="font-semibold text-isep-dark dark:text-white mt-6">
+            <p className="font-semibold text-isep-dark dark:text-white mt-6 text-center">
               Con admiración y todo mi compromiso,
-              <br />
-              Marc Gaja
-              <br />
-              <span className="font-normal text-sm">Director General</span>
-              <br />
-              <span className="font-normal text-sm">Universidad ISEP</span>
             </p>
           </div>
+          <Quote className="absolute -bottom-6 -right-6 w-20 h-20 text-isep-primary/10 dark:text-isep-primary/20 transform scale-x-[-1] scale-y-[-1]" />
         </div>
       </div>
     </div>
