@@ -6,7 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { GraduationCap, Clock, MessageSquare, KeyRound, Users } from "lucide-react";
+import { GraduationCap, Clock, MessageSquare, KeyRound, Users, Award, Target, FolderKanban, Briefcase, Badge } from "lucide-react";
 
 export const FaqSection = () => {
   return (
@@ -99,7 +99,7 @@ export const FaqSection = () => {
               </ol>
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-4" className="border-b-0">
+          <AccordionItem value="item-4">
             <AccordionTrigger className="text-lg font-semibold text-isep-dark dark:text-white hover:no-underline">
               <div className="flex items-center gap-3 text-left">
                 <Users className="w-8 h-8 text-isep-primary flex-shrink-0" />
@@ -117,6 +117,122 @@ export const FaqSection = () => {
                 <li>Accede a Microsoft Teams desde el navegador o la aplicación.</li>
                 <li>Inicia sesión con las credenciales indicadas.</li>
               </ol>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-5">
+            <AccordionTrigger className="text-lg font-semibold text-isep-dark dark:text-white hover:no-underline">
+              <div className="flex items-center gap-3 text-left">
+                <Award className="w-8 h-8 text-isep-primary flex-shrink-0" />
+                <span>Solicita tus constancias y certificados de forma fácil, directa y sin complicaciones</span>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="text-base text-gray-600 dark:text-gray-300 pt-4 pl-12">
+              <p className="mb-4">
+                En Universidad ISEP, tienes la ventaja de gestionar por tu cuenta cualquier constancia o certificado académico que necesites, de forma 100% digital, rápida y accesible desde tu plataforma. Ya no necesitas enviar correos, hacer filas o esperar respuestas: tú decides cuándo y qué documento solicitar.
+              </p>
+              <p className="mb-4">
+                Esto te permite tener el control total sobre tus trámites, descargar tus documentos al instante y usarlos para cualquier gestión escolar, laboral o personal, desde donde estés y cuando lo necesites.
+              </p>
+              <p>
+                Además, el sistema es intuitivo y está diseñado para que la experiencia sea clara y eficiente, sin depender de intermediarios ni procesos lentos. Así garantizamos que puedas enfocarte en lo más importante: tu formación.
+              </p>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-6">
+            <AccordionTrigger className="text-lg font-semibold text-isep-dark dark:text-white hover:no-underline">
+              <div className="flex items-center gap-3 text-left">
+                <Target className="w-8 h-8 text-isep-primary flex-shrink-0" />
+                <span>Evaluación clara, justa y pensada para tu aprendizaje</span>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="text-base text-gray-600 dark:text-gray-300 pt-4 pl-12">
+              <p className="mb-4">
+                En Universidad ISEP, tu evaluación está diseñada para apoyarte en todo momento. Tanto las actividades que realizas en línea como aquellas que implican entregas más elaboradas se enfocan en reflejar tu verdadero avance y darte oportunidades para mejorar.
+              </p>
+              <p className="mb-4">
+                Contarás con dos intentos por actividad, lo que te permite aprender de tus errores y mejorar tu calificación sin presión. Además, muchas de las evaluaciones se corrigen automáticamente, así que tendrás tu resultado al instante, sin tiempos de espera.
+              </p>
+              <p className="mb-4">
+                Cuando se trata de tareas más complejas, como análisis de casos o talleres, contarás con una rúbrica clara y transparente para que sepas exactamente qué se espera de ti y cómo puedes alcanzar el mejor resultado.
+              </p>
+              <p className="mb-4">
+                Y si en algún momento se presenta un imprevisto, tienes la posibilidad de solicitar una extensión de tiempo directamente con tu tutor, quien evaluará tu situación con cercanía y flexibilidad.
+              </p>
+              <p className="font-semibold text-isep-dark dark:text-white mt-6 bg-isep-primary/10 dark:bg-isep-primary/20 p-4 rounded-lg">
+                Lo más importante: tú estás en el centro del proceso, y cada herramienta está pensada para ayudarte a avanzar, aprender a tu ritmo y alcanzar tus objetivos académicos con claridad y confianza.
+              </p>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-7">
+            <AccordionTrigger className="text-lg font-semibold text-isep-dark dark:text-white hover:no-underline">
+              <div className="flex items-center gap-3 text-left">
+                <FolderKanban className="w-8 h-8 text-isep-primary flex-shrink-0" />
+                <span>Tus contenidos siempre organizados y accesibles</span>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="text-base text-gray-600 dark:text-gray-300 pt-4 pl-12">
+              <p className="mb-4">
+                En Universidad ISEP, todo lo que necesitas para avanzar en tu módulo está perfectamente organizado dentro de tu plataforma. Desde que ingresas, encuentras un entorno claro, intuitivo y adaptado para que puedas estudiar de manera ágil y sin complicaciones.
+              </p>
+              <p className="mb-4">
+                Tendrás acceso directo a materiales de estudio en línea, documentos descargables y recursos complementarios que enriquecen tu experiencia y te ayudan a prepararte mejor. La estructura está pensada para que no pierdas tiempo buscando, y puedas enfocarte en aprender y avanzar.
+              </p>
+              <p className="mb-4">
+                Además, puedes consultar gran parte del contenido sin conexión, lo que te da libertad para estudiar donde quieras y cuando quieras, incluso si no tienes internet en ese momento.
+              </p>
+              <p className="mb-4">
+                Y si en algún momento algo no se visualiza bien, no te preocupes: la plataforma está diseñada para adaptarse fácilmente a tus ajustes de idioma y pantalla. Solo asegúrate de tener el idioma correcto seleccionado y, si es necesario, ajustar la vista para aprovechar al máximo cada recurso.
+              </p>
+              <p className="font-semibold text-isep-dark dark:text-white mt-6 bg-isep-primary/10 dark:bg-isep-primary/20 p-4 rounded-lg">
+                🔸 Tu aprendizaje no se detiene. Aquí tienes todo lo necesario para avanzar, a tu ritmo y con autonomía.
+              </p>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-8">
+            <AccordionTrigger className="text-lg font-semibold text-isep-dark dark:text-white hover:no-underline">
+              <div className="flex items-center gap-3 text-left">
+                <Briefcase className="w-8 h-8 text-isep-primary flex-shrink-0" />
+                <span>¿Quieres hacer tus prácticas en una empresa o institución de tu interés? ¡En ISEP te apoyamos para lograrlo!</span>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="text-base text-gray-600 dark:text-gray-300 pt-4 pl-12">
+              <p className="mb-4">
+                En Universidad ISEP, tienes la posibilidad de gestionar tus prácticas profesionales en la empresa o institución que tú elijas, siempre que cumpla con los requisitos necesarios.
+              </p>
+              <p className="mb-4">
+                Si ya tienes un lugar en mente, el proceso es muy sencillo y diseñado para darte autonomía, pero con todo el respaldo de nuestra área de vinculación. No importa si la institución aún no está afiliada, te ayudamos a establecer el convenio de manera formal.
+              </p>
+              <p className="mb-4">
+                Solo necesitas compartir algunos datos clave sobre la empresa y la persona encargada, y nuestro equipo se encargará de coordinar lo necesario para que puedas realizar tus prácticas allí, de forma oficial, segura y con todo el respaldo institucional.
+              </p>
+              <p className="font-semibold text-isep-dark dark:text-white mt-6 bg-isep-primary/10 dark:bg-isep-primary/20 p-4 rounded-lg">
+                🔸 En ISEP te damos la libertad de construir tu experiencia profesional desde tus intereses, con acompañamiento y facilidad para gestionar cada paso.
+              </p>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-9" className="border-b-0">
+            <AccordionTrigger className="text-lg font-semibold text-isep-dark dark:text-white hover:no-underline">
+              <div className="flex items-center gap-3 text-left">
+                <Badge className="w-8 h-8 text-isep-primary flex-shrink-0" />
+                <span>Tu credencial ISEP: más que un documento, una llave de acceso a beneficios</span>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="text-base text-gray-600 dark:text-gray-300 pt-4 pl-12">
+              <p className="mb-4">
+                En Universidad ISEP, puedes solicitar tu credencial de estudiante en formato digital de forma sencilla y rápida. Este documento no solo te identifica como parte de nuestra comunidad académica, sino que te abre la puerta a una amplia variedad de beneficios dentro y fuera del ámbito educativo.
+              </p>
+              <p className="mb-4">
+                Contar con tu credencial puede hacer una gran diferencia: en muchas ciudades, te permite acceder a tarifas especiales en transporte público, descuentos en museos, cines, librerías, y también aprovechar convenios con restaurantes, gimnasios y comercios locales.
+              </p>
+              <p className="mb-4">
+                Además, si resides en una zona donde existen programas de apoyo estudiantil, como servicios de salud u orientación psicológica, es común que se solicite una credencial vigente para acceder a ellos.
+              </p>
+              <p className="mb-4">
+                Lo mejor es que puedes gestionarla desde donde estés y recibirla en formato digital. Solo necesitas contar con una buena fotografía y nosotros nos encargamos del resto.
+              </p>
+              <p className="font-semibold text-isep-dark dark:text-white mt-6 bg-isep-primary/10 dark:bg-isep-primary/20 p-4 rounded-lg">
+                🔸 Gestionar tu credencial es una forma de aprovechar al máximo tu vida universitaria y todos los beneficios que vienen con ella.
+              </p>
             </AccordionContent>
           </AccordionItem>
         </Accordion>
