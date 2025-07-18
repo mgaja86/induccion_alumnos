@@ -17,6 +17,8 @@ import { SurveyCertificateVideoModal } from "@/components/survey-certificate-vid
 import { BillingVideoModal } from "@/components/billing-video-modal";
 import { CertificatesSection } from "@/components/certificates-section";
 import { EvaluationSection } from "@/components/evaluation-section";
+import { ContentOrganizationSection } from "@/components/content-organization-section";
+import { InternshipsSection } from "@/components/internships-section";
 
 function WelcomeContent() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
@@ -132,6 +134,8 @@ function WelcomeContent() {
         <FaqSection />
         <CertificatesSection />
         <EvaluationSection />
+        <ContentOrganizationSection />
+        <InternshipsSection />
 
         <footer className="text-center py-8">
           {/* Made with Dyad removed */}
