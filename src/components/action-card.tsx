@@ -1,17 +1,20 @@
 import { CheckCircle2, type LucideIcon } from "lucide-react";
+import React from "react";
 
 interface ActionCardProps {
   icon: LucideIcon;
   title: string;
   onClick?: () => void;
   isCompleted?: boolean;
+  style?: React.CSSProperties;
 }
 
-export const ActionCard = ({ icon: Icon, title, onClick, isCompleted = false }: ActionCardProps) => {
+export const ActionCard = ({ icon: Icon, title, onClick, isCompleted = false, style }: ActionCardProps) => {
   return (
     <button
       onClick={onClick}
-      className="relative bg-white/10 backdrop-blur-sm p-4 sm:p-6 rounded-2xl text-center flex flex-col items-center justify-center aspect-square hover:bg-white/20 transition-colors cursor-pointer group w-full disabled:opacity-50 disabled:cursor-not-allowed"
+      style={style}
+      className="relative bg-white/10 backdrop-blur-sm p-4 sm:p-6 rounded-2xl text-center flex flex-col items-center justify-center aspect-square hover:bg-white/20 transition-colors cursor-pointer group w-full disabled:opacity-50 disabled:cursor-not-allowed opacity-0 animate-fade-in-up"
     >
       {isCompleted && (
         <div className="absolute top-2 right-2 bg-green-500 rounded-full p-1 text-white">

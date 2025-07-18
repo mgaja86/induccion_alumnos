@@ -5,7 +5,7 @@ import { Quote } from "lucide-react";
 
 export const RectorWelcome = () => {
   return (
-    <div className="bg-white dark:bg-isep-deep-purple/30 rounded-3xl shadow-lg overflow-hidden mb-8 p-8 sm:p-12">
+    <div className="bg-white dark:bg-isep-deep-purple/30 rounded-3xl shadow-lg overflow-hidden mb-8 p-8 sm:p-12 opacity-0 animate-fade-in-up">
       <div className="max-w-4xl mx-auto text-center">
         <Image
           src="https://f005.backblazeb2.com/file/files-Uchat/imagen+(3).jpeg"

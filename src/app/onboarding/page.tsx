@@ -67,6 +67,17 @@ function OnboardingDashboard() {
     if (!completedSteps.has('billingModule')) completeStep('billingModule');
   };
 
+  const actionCards = [
+    { icon: Video, title: "Video de Bienvenida", onClick: handleOpenVideo, step: 'welcomeVideo' },
+    { icon: LayoutDashboard, title: "Ingresa a tu campus", onClick: handleOpenCampusVideo, step: 'campusAccess' },
+    { icon: BookText, title: "Plan Docente", onClick: handleOpenTeachingPlanVideo, step: 'teachingPlan' },
+    { icon: PhoneForwarded, title: "Contacto Docente", onClick: handleOpenTeacherContactVideo, step: 'teacherContact' },
+    { icon: Library, title: "Contenidos", onClick: () => completeStep('contents'), step: 'contents' },
+    { icon: Link, title: "Enlaces de Interés", onClick: handleOpenLinksVideo, step: 'linksAndMaterials' },
+    { icon: Award, title: "Encuesta y Certificado", onClick: handleOpenSurveyVideo, step: 'surveyAndCertificate' },
+    { icon: Receipt, title: "Módulo de Facturación", onClick: handleOpenBillingVideo, step: 'billingModule' },
+  ] as const;
+
   return (
     <>
       <div className="bg-gray-100 dark:bg-isep-dark min-h-screen font-[family-name:var(--font-geist-sans)]">
@@ -84,7 +95,7 @@ function OnboardingDashboard() {
         <main className="container mx-auto px-6 py-8">
           <OnboardingProgressBar />
           {/* Main content area with curved background */}
-          <div className="bg-gradient-to-br from-isep-deep-purple to-isep-primary text-white p-8 sm:p-12 rounded-3xl shadow-2xl shadow-[#7848FF]/30">
+          <div className="bg-gradient-to-br from-isep-deep-purple to-isep-primary text-white p-8 sm:p-12 rounded-3xl shadow-2xl shadow-[#7848FF]/30 opacity-0 animate-scale-in">
             <div className="grid lg:grid-cols-3 gap-12 items-center">
               
               {/* Left Column (Welcome Message) */}
@@ -107,14 +118,16 @@ function OnboardingDashboard() {
               {/* Right Column (Action Cards) */}
               <div className="lg:col-span-2">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-                  <ActionCard icon={Video} title="Video de Bienvenida" onClick={handleOpenVideo} isCompleted={completedSteps.has('welcomeVideo')} />
-                  <ActionCard icon={LayoutDashboard} title="Ingresa a tu campus" onClick={handleOpenCampusVideo} isCompleted={completedSteps.has('campusAccess')} />
-                  <ActionCard icon={BookText} title="Plan Docente" onClick={handleOpenTeachingPlanVideo} isCompleted={completedSteps.has('teachingPlan')} />
-                  <ActionCard icon={PhoneForwarded} title="Contacto Docente" onClick={handleOpenTeacherContactVideo} isCompleted={completedSteps.has('teacherContact')} />
-                  <ActionCard icon={Library} title="Contenidos" onClick={() => completeStep('contents')} isCompleted={completedSteps.has('contents')} />
-                  <ActionCard icon={Link} title="Enlaces de Interés" onClick={handleOpenLinksVideo} isCompleted={completedSteps.has('linksAndMaterials')} />
-                  <ActionCard icon={Award} title="Encuesta y Certificado" onClick={handleOpenSurveyVideo} isCompleted={completedSteps.has('surveyAndCertificate')} />
-                  <ActionCard icon={Receipt} title="Módulo de Facturación" onClick={handleOpenBillingVideo} isCompleted={completedSteps.has('billingModule')} />
+                  {actionCards.map((card, index) => (
+                    <ActionCard 
+                      key={card.step}
+                      icon={card.icon} 
+                      title={card.title} 
+                      onClick={card.onClick} 
+                      isCompleted={completedSteps.has(card.step)}
+                      style={{ animationDelay: `${index * 100}ms` }}
+                    />
+                  ))}
                 </div>
               </div>
             </div>
