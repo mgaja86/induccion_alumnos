@@ -5,17 +5,17 @@ import Image from "next/image";
 export const RectorWelcome = () => {
   return (
     <div className="bg-white dark:bg-isep-deep-purple/30 rounded-3xl shadow-lg overflow-hidden mb-8">
-      <div className="grid md:grid-cols-5 items-center">
-        <div className="md:col-span-2 h-full">
+      <div className="flex flex-col md:flex-row">
+        <div className="md:w-1/3 flex-shrink-0">
           <Image
             src="https://f005.backblazeb2.com/file/files-Uchat/imagen+(3).jpeg"
             alt="Director General Marc Gaja"
             width={400}
             height={400}
-            className="w-full h-full object-cover object-center max-h-[300px] md:max-h-full"
+            className="w-full h-auto object-cover"
           />
         </div>
-        <div className="md:col-span-3 p-8 sm:p-10">
+        <div className="md:w-2/3 p-8 sm:p-10 flex flex-col justify-center">
           <h2 className="text-2xl font-bold text-isep-primary mb-4">
             Un Mensaje de Nuestro Director General
           </h2>
