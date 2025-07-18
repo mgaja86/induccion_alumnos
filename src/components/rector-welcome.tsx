@@ -4,22 +4,22 @@ import Image from "next/image";
 
 export const RectorWelcome = () => {
   return (
-    <div className="bg-white dark:bg-isep-deep-purple/30 rounded-3xl shadow-lg overflow-hidden mb-8">
-      <div className="flex flex-col md:flex-row">
-        <div className="md:w-1/3 flex-shrink-0">
+    <div className="bg-white dark:bg-isep-deep-purple/30 rounded-3xl shadow-lg overflow-hidden mb-8 p-8 sm:p-10">
+      <div className="flex flex-col items-center text-center">
+        <div className="mb-8">
           <Image
             src="https://f005.backblazeb2.com/file/files-Uchat/imagen+(3).jpeg"
             alt="Director General Marc Gaja"
-            width={400}
-            height={400}
-            className="w-full h-auto object-cover"
+            width={192}
+            height={192}
+            className="rounded-full object-cover w-40 h-40 sm:w-48 sm:h-48 ring-4 ring-isep-primary ring-offset-4 ring-offset-white dark:ring-offset-isep-deep-purple/30"
           />
         </div>
-        <div className="md:w-2/3 p-8 sm:p-10 flex flex-col justify-center">
-          <h2 className="text-2xl font-bold text-isep-primary mb-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-isep-primary mb-6">
             Un Mensaje de Nuestro Director General
           </h2>
-          <div className="text-gray-700 dark:text-gray-300 space-y-3 text-base">
+          <div className="text-gray-700 dark:text-gray-300 space-y-4 text-base text-left sm:text-center">
             <p>
               Queridas y queridos estudiantes,
             </p>
@@ -44,7 +44,7 @@ export const RectorWelcome = () => {
             <p>
               Bienvenidos a Universidad ISEP. Estamos orgullosos de tenerlos aquí.
             </p>
-            <p className="font-semibold text-isep-dark dark:text-white mt-4">
+            <p className="font-semibold text-isep-dark dark:text-white mt-6">
               Con admiración y todo mi compromiso,
               <br />
               Marc Gaja

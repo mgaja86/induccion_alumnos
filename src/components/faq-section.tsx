@@ -6,7 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { GraduationCap, Clock, MessageSquare, KeyRound, Users, Award, Target, FolderKanban, Briefcase, Badge } from "lucide-react";
+import { GraduationCap, Clock, MessageSquare, KeyRound, Users, Award, Target, FolderKanban, Briefcase, Badge, HeartHandshake } from "lucide-react";
 
 export const FaqSection = () => {
   return (
@@ -210,7 +210,7 @@ export const FaqSection = () => {
               </p>
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-9" className="border-b-0">
+          <AccordionItem value="item-9">
             <AccordionTrigger className="text-lg font-semibold text-isep-dark dark:text-white hover:no-underline">
               <div className="flex items-center gap-3 text-left">
                 <Badge className="w-8 h-8 text-isep-primary flex-shrink-0" />
@@ -233,6 +233,40 @@ export const FaqSection = () => {
               <p className="font-semibold text-isep-dark dark:text-white mt-6 bg-isep-primary/10 dark:bg-isep-primary/20 p-4 rounded-lg">
                 🔸 Gestionar tu credencial es una forma de aprovechar al máximo tu vida universitaria y todos los beneficios que vienen con ella.
               </p>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-10" className="border-b-0">
+            <AccordionTrigger className="text-lg font-semibold text-isep-dark dark:text-white hover:no-underline">
+              <div className="flex items-center gap-3 text-left">
+                <HeartHandshake className="w-8 h-8 text-isep-primary flex-shrink-0" />
+                <span className="text-left">Beneficio exclusivo: Accede a atención psicológica gratuita con ISEP CLINIC</span>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="text-base text-gray-600 dark:text-gray-300 pt-4 pl-12">
+              <p className="mb-4">
+                En Universidad ISEP, tu bienestar es una prioridad. Por eso, como parte de nuestra comunidad, tienes acceso a ISEP CLINIC, un programa de atención psicológica en línea, totalmente gratuito, creado especialmente para apoyar tu salud emocional.
+              </p>
+              <h4 className="font-semibold text-isep-dark dark:text-white mb-2">💙 ¿Qué es ISEP CLINIC?</h4>
+              <p className="mb-4">
+                ISEP CLINIC es un programa de acompañamiento terapéutico brindado por estudiantes avanzados de la Maestría en Psicología Clínica de Universidad ISEP, quienes cuentan con experiencia profesional y realizan sus prácticas supervisadas ofreciendo terapia gratuita y de calidad.
+              </p>
+              <h4 className="font-semibold text-isep-dark dark:text-white mb-2">🧠 ¿Cómo funciona?</h4>
+              <ul className="list-disc pl-5 space-y-2 mb-4">
+                <li>Las sesiones son totalmente en línea y se realizan mediante plataformas accesibles, elegidas en conjunto por el paciente y el terapeuta.</li>
+                <li>Cada persona recibe un mínimo de 15 sesiones, con posibilidad de extender el tratamiento si se considera necesario.</li>
+                <li>Todas las sesiones están supervisadas por profesionales expertos, garantizando así una atención ética y comprometida.</li>
+              </ul>
+              <h4 className="font-semibold text-isep-dark dark:text-white mb-2">🌍 ¿Quién puede acceder?</h4>
+              <p className="mb-4">
+                ¡Cualquier persona interesada en recibir apoyo psicológico puede hacerlo! No necesitas cumplir con ningún requisito específico para acceder al servicio.
+              </p>
+              <h4 className="font-semibold text-isep-dark dark:text-white mb-2">📅 ¿Cómo agendar una cita?</h4>
+              <p className="mb-4">
+                Puedes registrarte de forma muy sencilla a través del siguiente enlace:
+              </p>
+              <a href="#" target="_blank" rel="noopener noreferrer" className="inline-block bg-isep-accent hover:bg-isep-accent/90 text-isep-dark font-bold py-2 px-4 rounded-lg transition-colors">
+                👉 Haz clic aquí para solicitar tu cita
+              </a>
             </AccordionContent>
           </AccordionItem>
         </Accordion>
