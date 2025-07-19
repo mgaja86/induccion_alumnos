@@ -264,7 +264,7 @@ export const FaqSection = () => {
               <p className="mb-4">
                 Puedes registrarte de forma muy sencilla a través del siguiente enlace:
               </p>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="inline-block bg-isep-accent hover:bg-isep-accent/90 text-isep-dark font-bold py-2 px-4 rounded-lg transition-colors">
+              <a href="https://app.universidadisep.com/survey/start/6da5dc01-a033-48b8-af43-b2892c03ced1" target="_blank" rel="noopener noreferrer" className="inline-block bg-isep-accent hover:bg-isep-accent/90 text-isep-dark font-bold py-2 px-4 rounded-lg transition-colors">
                 👉 Haz clic aquí para solicitar tu cita
               </a>
             </AccordionContent>
