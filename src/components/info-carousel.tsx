@@ -67,7 +67,7 @@ export const InfoCarousel = () => {
                 <div className="p-1">
                   <div
                     className={cn(
-                      "overflow-hidden rounded-2xl transition-all duration-500 ease-in-out",
+                      "overflow-hidden rounded-2xl transition-all duration-500 ease-in-out bg-black/50 dark:bg-black/20",
                       index === current ? "shadow-2xl shadow-isep-primary/40" : "scale-90 opacity-60"
                     )}
                   >
@@ -76,7 +76,7 @@ export const InfoCarousel = () => {
                       alt={`Información ISEP ${index + 1}`}
                       width={1280}
                       height={720}
-                      className="aspect-video object-cover w-full h-full rounded-2xl"
+                      className="aspect-video object-contain w-full h-full rounded-2xl"
                     />
                   </div>
                 </div>
