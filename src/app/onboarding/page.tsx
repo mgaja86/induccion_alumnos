@@ -14,6 +14,7 @@ import { TeacherContactVideoModal } from "@/components/teacher-contact-video-mod
 import { LinksMaterialsVideoModal } from "@/components/links-materials-video-modal";
 import { SurveyCertificateVideoModal } from "@/components/survey-certificate-video-modal";
 import { BillingVideoModal } from "@/components/billing-video-modal";
+import { InfoCarousel } from "@/components/info-carousel";
 
 function OnboardingDashboard() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
@@ -133,6 +134,8 @@ function OnboardingDashboard() {
             </div>
           </div>
         </main>
+
+        <InfoCarousel />
 
         <FaqSection />
 

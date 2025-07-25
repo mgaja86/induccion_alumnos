@@ -228,7 +228,7 @@ export const FaqSection = () => {
                 Además, si resides en una zona donde existen programas de apoyo estudiantil, como servicios de salud u orientación psicológica, es común que se solicite una credencial vigente para acceder a ellos.
               </p>
               <p className="mb-4">
-                Lo mejor es que puedes gestionarla desde donde estés y recibirla en formato digital. Solo necesitas contar con una buena fotografía y nosotros nos encargamos del resto.
+                Para solicitarla, simplemente envía un correo con tu nombre completo, programa y una fotografía tipo carnet a <a href="mailto:orientacion@universidadisep.com" className="font-semibold text-isep-primary hover:underline">orientacion@universidadisep.com</a>.
               </p>
               <p className="font-semibold text-isep-dark dark:text-white mt-6 bg-isep-primary/10 dark:bg-isep-primary/20 p-4 rounded-lg">
                 🔸 Gestionar tu credencial es una forma de aprovechar al máximo tu vida universitaria y todos los beneficios que vienen con ella.
