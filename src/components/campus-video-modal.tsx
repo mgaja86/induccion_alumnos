@@ -24,7 +24,7 @@ export const CampusVideoModal = ({ isOpen, onClose }: CampusVideoModalProps) => 
         <div className="relative pt-[56.25%] rounded-lg overflow-hidden my-4 ring-2 ring-isep-accent/50">
           <iframe
             className="absolute top-0 left-0 w-full h-full"
-            src="https://iframe.mediadelivery.net/embed/273279/09f7b914-ecc1-4317-b5f8-6fbd1850606c?autoplay=true&responsive=true"
+            src="https://iframe.mediadelivery.net/embed/273279/84b0d558-e40a-4434-add3-1efe2b474ca0?autoplay=true&responsive=true"
             loading="lazy"
             title="Campus Virtual Video Player"
             allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"

@@ -24,7 +24,7 @@ export const LinksMaterialsVideoModal = ({ isOpen, onClose }: LinksMaterialsVide
         <div className="relative pt-[56.25%] rounded-lg overflow-hidden my-4 ring-2 ring-isep-accent/50">
           <iframe
             className="absolute top-0 left-0 w-full h-full"
-            src="https://iframe.mediadelivery.net/embed/273279/6e49d937-7774-48ab-835f-0c9d7660da84?autoplay=false&loop=false&muted=false&preload=false&responsive=true"
+            src="https://iframe.mediadelivery.net/embed/273279/c6c45ad4-1089-4702-981a-f93ef0e91aef?autoplay=false&loop=false&muted=false&preload=false&responsive=true"
             loading="lazy"
             title="Enlaces de Interés Video Player"
             allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
