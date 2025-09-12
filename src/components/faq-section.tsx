@@ -10,7 +10,7 @@ import { GraduationCap, Clock, MessageSquare, KeyRound, Users, Award, Target, Fo
 
 export const FaqSection = () => {
   return (
-    <div className="container mx-auto px-6 py-8 opacity-0 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
+    <div className="container mx-auto px-6 py-8 opacity-0 animate-fade-in-up" style={{ animationDelay: '500ms' }}>
       <h2 className="text-3xl font-bold text-center text-isep-dark dark:text-white mb-8">
         Preguntas Frecuentes
       </h2>
