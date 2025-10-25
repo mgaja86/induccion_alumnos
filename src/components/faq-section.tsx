@@ -60,13 +60,9 @@ export const FaqSection = () => {
               <h4 className="font-semibold text-isep-dark dark:text-white mb-2">Contactar a tu tutor:</h4>
               <ol className="list-decimal pl-5 space-y-2 mb-4">
                 <li>Ingresa al módulo o materia en la que tienes dudas.</li>
-                <li>Da clic en "Contacto Docente".</li>
+                <li>Da click en contacto docente donde recibirás asesoría a través de un agente automático. Disponible 24 horas al día, 7 días a la semana, por llamada, para ofrecerte respuestas inmediatas y resolver tus inquietudes y tus dudas académicas.</li>
                 <li>Completa los datos solicitados para enviar tu solicitud de contacto con el tutor.</li>
               </ol>
-              <h4 className="font-semibold text-isep-dark dark:text-white mb-2">Asesoría a través de agente automático:</h4>
-              <p className="mb-4">
-                En el mismo espacio, encontrarás un agente disponible para responder tus dudas académicas. Este agente está disponible 24 horas al día, 7 días a la semana, por llamada, para ofrecerte respuestas inmediatas y resolver tus inquietudes.
-              </p>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
