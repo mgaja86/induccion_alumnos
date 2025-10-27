@@ -7,11 +7,23 @@ import { ActionCard } from "@/components/action-card";
 import { ProgressProvider, useProgress } from "@/context/progress-context";
 import { OnboardingProgressBar } from "@/components/progress-bar";
 import { WelcomeVideoModal } from "@/components/welcome-video-modal";
+import { CampusVideoModal } from "@/components/campus-video-modal";
 import { FaqSection } from "@/components/faq-section";
+import { TeachingPlanVideoModal } from "@/components/teaching-plan-video-modal";
+import { TeacherContactVideoModal } from "@/components/teacher-contact-video-modal";
+import { LinksMaterialsVideoModal } from "@/components/links-materials-video-modal";
+import { SurveyCertificateVideoModal } from "@/components/survey-certificate-video-modal";
+import { BillingVideoModal } from "@/components/billing-video-modal";
 import { MasterCalendarSection } from "@/components/master-calendar-section";
 
 function OnboardingDashboard() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const [isCampusModalOpen, setIsCampusModalOpen] = useState(false);
+  const [isTeachingPlanModalOpen, setIsTeachingPlanModalOpen] = useState(false);
+  const [isTeacherContactModalOpen, setIsTeacherContactModalOpen] = useState(false);
+  const [isLinksModalOpen, setIsLinksModalOpen] = useState(false);
+  const [isSurveyModalOpen, setIsSurveyModalOpen] = useState(false);
+  const [isBillingModalOpen, setIsBillingModalOpen] = useState(false);
   const { completedSteps, completeStep } = useProgress();
 
   const handleOpenVideo = () => setIsVideoModalOpen(true);
@@ -20,15 +32,51 @@ function OnboardingDashboard() {
     if (!completedSteps.has('welcomeVideo')) completeStep('welcomeVideo');
   };
 
+  const handleOpenCampusVideo = () => setIsCampusModalOpen(true);
+  const handleCloseCampusVideo = () => {
+    setIsCampusModalOpen(false);
+    if (!completedSteps.has('campusAccess')) completeStep('campusAccess');
+  };
+
+  const handleOpenTeachingPlanVideo = () => setIsTeachingPlanModalOpen(true);
+  const handleCloseTeachingPlanVideo = () => {
+    setIsTeachingPlanModalOpen(false);
+    if (!completedSteps.has('teachingPlan')) completeStep('teachingPlan');
+  };
+
+  const handleOpenTeacherContactVideo = () => setIsTeacherContactModalOpen(true);
+  const handleCloseTeacherContactVideo = () => {
+    setIsTeacherContactModalOpen(false);
+    if (!completedSteps.has('teacherContact')) completeStep('teacherContact');
+  };
+
+  const handleOpenLinksVideo = () => setIsLinksModalOpen(true);
+  const handleCloseLinksVideo = () => {
+    setIsLinksModalOpen(false);
+    if (!completedSteps.has('linksAndMaterials')) completeStep('linksAndMaterials');
+  };
+
+  const handleOpenSurveyVideo = () => setIsSurveyModalOpen(true);
+  const handleCloseSurveyVideo = () => {
+    setIsSurveyModalOpen(false);
+    if (!completedSteps.has('surveyAndCertificate')) completeStep('surveyAndCertificate');
+  };
+
+  const handleOpenBillingVideo = () => setIsBillingModalOpen(true);
+  const handleCloseBillingVideo = () => {
+    setIsBillingModalOpen(false);
+    if (!completedSteps.has('billingModule')) completeStep('billingModule');
+  };
+
   const actionCards = [
     { icon: Video, title: "Video de Bienvenida", onClick: handleOpenVideo, step: 'welcomeVideo' },
-    { icon: LayoutDashboard, title: "Ingresa a tu campus", onClick: () => completeStep('campusAccess'), step: 'campusAccess' },
-    { icon: BookText, title: "Plan Docente", onClick: () => completeStep('teachingPlan'), step: 'teachingPlan' },
-    { icon: PhoneForwarded, title: "Contacto Docente", onClick: () => completeStep('teacherContact'), step: 'teacherContact' },
+    { icon: LayoutDashboard, title: "Ingresa a tu campus", onClick: handleOpenCampusVideo, step: 'campusAccess' },
+    { icon: BookText, title: "Plan Docente", onClick: handleOpenTeachingPlanVideo, step: 'teachingPlan' },
+    { icon: PhoneForwarded, title: "Contacto Docente", onClick: handleOpenTeacherContactVideo, step: 'teacherContact' },
     { icon: Library, title: "Contenidos", onClick: () => completeStep('contents'), step: 'contents' },
-    { icon: Link, title: "Enlaces de Interés", onClick: () => completeStep('linksAndMaterials'), step: 'linksAndMaterials' },
-    { icon: Award, title: "Encuesta y Certificado", onClick: () => completeStep('surveyAndCertificate'), step: 'surveyAndCertificate' },
-    { icon: Receipt, title: "Módulo de Facturación", onClick: () => completeStep('billingModule'), step: 'billingModule' },
+    { icon: Link, title: "Enlaces de Interés", onClick: handleOpenLinksVideo, step: 'linksAndMaterials' },
+    { icon: Award, title: "Encuesta y Certificado", onClick: handleOpenSurveyVideo, step: 'surveyAndCertificate' },
+    { icon: Receipt, title: "Módulo de Facturación", onClick: handleOpenBillingVideo, step: 'billingModule' },
   ] as const;
 
   return (
@@ -95,6 +143,12 @@ function OnboardingDashboard() {
         </footer>
       </div>
       <WelcomeVideoModal isOpen={isVideoModalOpen} onClose={handleCloseVideo} />
+      <CampusVideoModal isOpen={isCampusModalOpen} onClose={handleCloseCampusVideo} />
+      <TeachingPlanVideoModal isOpen={isTeachingPlanModalOpen} onClose={handleCloseTeachingPlanVideo} />
+      <TeacherContactVideoModal isOpen={isTeacherContactModalOpen} onClose={handleCloseTeacherContactVideo} />
+      <LinksMaterialsVideoModal isOpen={isLinksModalOpen} onClose={handleCloseLinksVideo} />
+      <SurveyCertificateVideoModal isOpen={isSurveyModalOpen} onClose={handleCloseSurveyVideo} />
+      <BillingVideoModal isOpen={isBillingModalOpen} onClose={handleCloseBillingVideo} />
     </>
   );
 }
