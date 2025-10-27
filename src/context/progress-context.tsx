@@ -14,7 +14,7 @@ const OnboardingSteps = [
   'billingModule'
 ] as const;
 
-type Step = typeof OnboardingSteps[number];
+export type Step = typeof OnboardingSteps[number];
 
 interface ProgressContextType {
   completedSteps: Set<Step>;
