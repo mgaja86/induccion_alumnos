@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Award, BookText, LayoutDashboard, Library, Link, Receipt, PhoneForwarded, Video } from "lucide-react";
+import { Award, BookText, LayoutDashboard, Library, Link, Receipt, PhoneForwarded, Video, type LucideIcon } from "lucide-react";
 import { ActionCard } from "@/components/action-card";
 import { ProgressProvider, useProgress, type Step } from "@/context/progress-context";
 import { OnboardingProgressBar } from "@/components/progress-bar";
@@ -33,7 +33,7 @@ function OnboardingDashboard() {
     setActiveModal(null);
   };
 
-  const actionCards: { icon: React.ElementType; title: string; onClick: () => void; step: Step }[] = [
+  const actionCards: { icon: LucideIcon; title: string; onClick: () => void; step: Step }[] = [
     { icon: Video, title: "Video de Bienvenida", onClick: () => handleOpenModal('welcomeVideo'), step: 'welcomeVideo' },
     { icon: LayoutDashboard, title: "Ingresa a tu campus", onClick: () => handleOpenModal('campusAccess'), step: 'campusAccess' },
     { icon: BookText, title: "Plan Docente", onClick: () => handleOpenModal('teachingPlan'), step: 'teachingPlan' },
