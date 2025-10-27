@@ -21,16 +21,11 @@ export const CampusVideoModal = ({ isOpen, onClose }: CampusVideoModalProps) => 
             Este video te guiará a través de nuestro campus virtual, mostrándote cómo navegar, encontrar tus cursos y aprovechar al máximo todas las herramientas a tu disposición. ¡Prepárate para dominar tu entorno de aprendizaje!
           </p>
         </DialogHeader>
-        <div className="relative pt-[56.25%] rounded-lg overflow-hidden my-4 ring-2 ring-isep-accent/50">
-          <iframe
-            className="absolute top-0 left-0 w-full h-full"
-            src="https://iframe.mediadelivery.net/embed/273279/84b0d558-e40a-4434-add3-1efe2b474ca0?autoplay=true&responsive=true"
-            loading="lazy"
-            title="Campus Virtual Video Player"
-            allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
-            allowFullScreen={true}
-            frameBorder="0"
-          ></iframe>
+        <div className="relative aspect-video rounded-lg overflow-hidden my-4 ring-2 ring-isep-accent/50 bg-isep-dark/50 flex items-center justify-center">
+          <div className="text-center text-purple-200 p-4">
+            <p className="font-semibold text-lg">¡Próximamente!</p>
+            <p>Este video estará disponible mañana para que puedas continuar.</p>
+          </div>
         </div>
         <DialogFooter className="sm:justify-center">
           <Button 

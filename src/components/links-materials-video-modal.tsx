@@ -21,16 +21,11 @@ export const LinksMaterialsVideoModal = ({ isOpen, onClose }: LinksMaterialsVide
             Descubre dónde encontrar todos los enlaces y materiales adicionales que enriquecerán tu aprendizaje.
           </p>
         </DialogHeader>
-        <div className="relative pt-[56.25%] rounded-lg overflow-hidden my-4 ring-2 ring-isep-accent/50">
-          <iframe
-            className="absolute top-0 left-0 w-full h-full"
-            src="https://iframe.mediadelivery.net/embed/273279/c6c45ad4-1089-4702-981a-f93ef0e91aef?autoplay=false&loop=false&muted=false&preload=false&responsive=true"
-            loading="lazy"
-            title="Enlaces de Interés Video Player"
-            allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
-            allowFullScreen={true}
-            frameBorder="0"
-          ></iframe>
+        <div className="relative aspect-video rounded-lg overflow-hidden my-4 ring-2 ring-isep-accent/50 bg-isep-dark/50 flex items-center justify-center">
+          <div className="text-center text-purple-200 p-4">
+            <p className="font-semibold text-lg">¡Próximamente!</p>
+            <p>Este video estará disponible mañana para que puedas continuar.</p>
+          </div>
         </div>
         <DialogFooter className="sm:justify-center">
           <Button 

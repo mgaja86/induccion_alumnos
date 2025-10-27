@@ -21,16 +21,11 @@ export const TeachingPlanVideoModal = ({ isOpen, onClose }: TeachingPlanVideoMod
             Este video te explicará en detalle tu plan docente, las asignaturas, los objetivos de aprendizaje y cómo se evaluará tu progreso. ¡Es tu mapa hacia el éxito académico!
           </p>
         </DialogHeader>
-        <div className="relative pt-[56.25%] rounded-lg overflow-hidden my-4 ring-2 ring-isep-accent/50">
-          <iframe
-            className="absolute top-0 left-0 w-full h-full"
-            src="https://iframe.mediadelivery.net/embed/273279/874a6e5b-18ca-4b18-a21b-cd45d0b7b364?autoplay=false&loop=false&muted=false&preload=false&responsive=true"
-            loading="lazy"
-            title="Plan Docente Video Player"
-            allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
-            allowFullScreen={true}
-            frameBorder="0"
-          ></iframe>
+        <div className="relative aspect-video rounded-lg overflow-hidden my-4 ring-2 ring-isep-accent/50 bg-isep-dark/50 flex items-center justify-center">
+          <div className="text-center text-purple-200 p-4">
+            <p className="font-semibold text-lg">¡Próximamente!</p>
+            <p>Este video estará disponible mañana para que puedas continuar.</p>
+          </div>
         </div>
         <DialogFooter className="sm:justify-center">
           <Button 
