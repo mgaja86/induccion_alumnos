@@ -16,7 +16,7 @@ import { ActionCard } from "@/components/action-card";
 import { ProgressProvider, useProgress, type Step } from "@/context/progress-context";
 import { OnboardingProgressBar } from "@/components/progress-bar";
 import { WelcomeVideoModal } from "@/components/welcome-video-modal";
-import { CampusVideoModal } from "@/components/campus-video-modal";
+import { CampusVideoSheet } from "@/components/campus-video-sheet";
 import { WorkshopsAnnouncementsModal } from "@/components/workshops-announcements-modal";
 import { ThesisPracticesModal } from "@/components/thesis-practices-modal";
 import { BillingServicesModal } from "@/components/billing-services-modal";
@@ -118,7 +118,7 @@ function OnboardingDashboard() {
       
       {/* Modals */}
       <WelcomeVideoModal isOpen={activeModal === 'welcome'} onClose={handleCloseModal} />
-      <CampusVideoModal isOpen={activeModal === 'campusAccess'} onClose={handleCloseModal} />
+      <CampusVideoSheet isOpen={activeModal === 'campusAccess'} onClose={handleCloseModal} />
       <WorkshopsAnnouncementsModal isOpen={activeModal === 'workshops'} onClose={handleCloseModal} />
       <ThesisPracticesModal isOpen={activeModal === 'thesis'} onClose={handleCloseModal} />
       <BillingServicesModal isOpen={activeModal === 'billing'} onClose={handleCloseModal} />
