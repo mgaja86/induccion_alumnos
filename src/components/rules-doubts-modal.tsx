@@ -4,21 +4,21 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 
-interface TeachingPlanVideoModalProps {
+interface RulesDoubtsModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-export const TeachingPlanVideoModal = ({ isOpen, onClose }: TeachingPlanVideoModalProps) => {
+export const RulesDoubtsModal = ({ isOpen, onClose }: RulesDoubtsModalProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-3xl bg-gradient-to-br from-isep-deep-purple to-isep-primary text-white border-0 shadow-2xl shadow-isep-primary/40">
         <DialogHeader className="text-center items-center">
           <DialogTitle className="text-3xl font-extrabold text-white mb-2">
-            Conoce tu Plan Docente
+            Normativa y Mis Dudas
           </DialogTitle>
           <p className="text-purple-200 text-lg max-w-md">
-            Este video te explicará en detalle tu plan docente, las asignaturas, los objetivos de aprendizaje y cómo se evaluará tu progreso. ¡Es tu mapa hacia el éxito académico!
+            Consulta la normativa académica y encuentra respuestas a las preguntas más frecuentes en nuestra sección de FAQ.
           </p>
         </DialogHeader>
         <div className="relative aspect-video rounded-lg overflow-hidden my-4 ring-2 ring-isep-accent/50 bg-isep-dark/50 flex items-center justify-center">
@@ -33,7 +33,7 @@ export const TeachingPlanVideoModal = ({ isOpen, onClose }: TeachingPlanVideoMod
             className="bg-isep-accent hover:bg-isep-accent/90 text-isep-dark font-bold text-lg px-8 py-6 rounded-full transition-transform hover:scale-105"
           >
             <CheckCircle className="w-6 h-6 mr-2" />
-            ¡Perfecto, lo entiendo!
+            ¡Genial!
           </Button>
         </DialogFooter>
       </DialogContent>

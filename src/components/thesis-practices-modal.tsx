@@ -4,21 +4,21 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 
-interface BillingVideoModalProps {
+interface ThesisPracticesModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-export const BillingVideoModal = ({ isOpen, onClose }: BillingVideoModalProps) => {
+export const ThesisPracticesModal = ({ isOpen, onClose }: ThesisPracticesModalProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-3xl bg-gradient-to-br from-isep-deep-purple to-isep-primary text-white border-0 shadow-2xl shadow-isep-primary/40">
         <DialogHeader className="text-center items-center">
           <DialogTitle className="text-3xl font-extrabold text-white mb-2">
-            Módulo de Facturación
+            Revisión de Tesis y Prácticas
           </DialogTitle>
           <p className="text-purple-200 text-lg max-w-md">
-            Aprende a gestionar tus pagos, consultar facturas y mantener tu información de facturación actualizada.
+            Descubre el proceso para la revisión de tu tesis y cómo gestionar tus prácticas profesionales.
           </p>
         </DialogHeader>
         <div className="relative aspect-video rounded-lg overflow-hidden my-4 ring-2 ring-isep-accent/50 bg-isep-dark/50 flex items-center justify-center">

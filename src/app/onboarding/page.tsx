@@ -2,17 +2,26 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Award, BookText, LayoutDashboard, Library, Link, Receipt, PhoneForwarded, Video, type LucideIcon } from "lucide-react";
+import { 
+  Video, 
+  LayoutDashboard, 
+  Megaphone, 
+  GraduationCap, 
+  Receipt, 
+  HelpCircle, 
+  MessageSquare,
+  type LucideIcon 
+} from "lucide-react";
 import { ActionCard } from "@/components/action-card";
 import { ProgressProvider, useProgress, type Step } from "@/context/progress-context";
 import { OnboardingProgressBar } from "@/components/progress-bar";
 import { WelcomeVideoModal } from "@/components/welcome-video-modal";
 import { CampusVideoModal } from "@/components/campus-video-modal";
-import { TeachingPlanVideoModal } from "@/components/teaching-plan-video-modal";
-import { TeacherContactVideoModal } from "@/components/teacher-contact-video-modal";
-import { LinksMaterialsVideoModal } from "@/components/links-materials-video-modal";
-import { SurveyCertificateVideoModal } from "@/components/survey-certificate-video-modal";
-import { BillingVideoModal } from "@/components/billing-video-modal";
+import { WorkshopsAnnouncementsModal } from "@/components/workshops-announcements-modal";
+import { ThesisPracticesModal } from "@/components/thesis-practices-modal";
+import { BillingServicesModal } from "@/components/billing-services-modal";
+import { RulesDoubtsModal } from "@/components/rules-doubts-modal";
+import { ContactActivitiesModal } from "@/components/contact-activities-modal";
 import { FaqSection } from "@/components/faq-section";
 import { MasterCalendarSection } from "@/components/master-calendar-section";
 
@@ -34,14 +43,13 @@ function OnboardingDashboard() {
   };
 
   const actionCards: { icon: LucideIcon; title: string; onClick: () => void; step: Step }[] = [
-    { icon: Video, title: "Video de Bienvenida", onClick: () => handleOpenModal('welcomeVideo'), step: 'welcomeVideo' },
-    { icon: LayoutDashboard, title: "Ingresa a tu campus", onClick: () => handleOpenModal('campusAccess'), step: 'campusAccess' },
-    { icon: BookText, title: "Plan Docente", onClick: () => handleOpenModal('teachingPlan'), step: 'teachingPlan' },
-    { icon: PhoneForwarded, title: "Contacto Docente", onClick: () => handleOpenModal('teacherContact'), step: 'teacherContact' },
-    { icon: Library, title: "Contenidos", onClick: () => completeStep('contents'), step: 'contents' },
-    { icon: Link, title: "Enlaces de Interés", onClick: () => handleOpenModal('linksAndMaterials'), step: 'linksAndMaterials' },
-    { icon: Award, title: "Encuesta y Certificado", onClick: () => handleOpenModal('surveyAndCertificate'), step: 'surveyAndCertificate' },
-    { icon: Receipt, title: "Módulo de Facturación", onClick: () => handleOpenModal('billingModule'), step: 'billingModule' },
+    { icon: Video, title: "BIENVENIDA", onClick: () => handleOpenModal('welcome'), step: 'welcome' },
+    { icon: LayoutDashboard, title: "INGRESA A TU CAMPUS", onClick: () => handleOpenModal('campusAccess'), step: 'campusAccess' },
+    { icon: Megaphone, title: "TALLERES Y TABLON DE ANUNCIOS", onClick: () => handleOpenModal('workshops'), step: 'workshops' },
+    { icon: GraduationCap, title: "REVISION DE TESIS Y PRACTICAS", onClick: () => handleOpenModal('thesis'), step: 'thesis' },
+    { icon: Receipt, title: "FACTURAS Y SERVICIOS ADICIONALES", onClick: () => handleOpenModal('billing'), step: 'billing' },
+    { icon: HelpCircle, title: "NORMATIVA Y MIS DUDAS", onClick: () => handleOpenModal('rules'), step: 'rules' },
+    { icon: MessageSquare, title: "CONTACTO DOCENTE Y ACTIVIDADES EVALUATIVAS", onClick: () => handleOpenModal('contactActivities'), step: 'contactActivities' },
   ];
 
   return (
@@ -109,13 +117,13 @@ function OnboardingDashboard() {
       </div>
       
       {/* Modals */}
-      <WelcomeVideoModal isOpen={activeModal === 'welcomeVideo'} onClose={handleCloseModal} />
+      <WelcomeVideoModal isOpen={activeModal === 'welcome'} onClose={handleCloseModal} />
       <CampusVideoModal isOpen={activeModal === 'campusAccess'} onClose={handleCloseModal} />
-      <TeachingPlanVideoModal isOpen={activeModal === 'teachingPlan'} onClose={handleCloseModal} />
-      <TeacherContactVideoModal isOpen={activeModal === 'teacherContact'} onClose={handleCloseModal} />
-      <LinksMaterialsVideoModal isOpen={activeModal === 'linksAndMaterials'} onClose={handleCloseModal} />
-      <SurveyCertificateVideoModal isOpen={activeModal === 'surveyAndCertificate'} onClose={handleCloseModal} />
-      <BillingVideoModal isOpen={activeModal === 'billingModule'} onClose={handleCloseModal} />
+      <WorkshopsAnnouncementsModal isOpen={activeModal === 'workshops'} onClose={handleCloseModal} />
+      <ThesisPracticesModal isOpen={activeModal === 'thesis'} onClose={handleCloseModal} />
+      <BillingServicesModal isOpen={activeModal === 'billing'} onClose={handleCloseModal} />
+      <RulesDoubtsModal isOpen={activeModal === 'rules'} onClose={handleCloseModal} />
+      <ContactActivitiesModal isOpen={activeModal === 'contactActivities'} onClose={handleCloseModal} />
     </>
   );
 }

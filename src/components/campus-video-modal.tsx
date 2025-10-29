@@ -15,7 +15,7 @@ export const CampusVideoModal = ({ isOpen, onClose }: CampusVideoModalProps) => 
       <DialogContent className="max-w-3xl bg-gradient-to-br from-isep-deep-purple to-isep-primary text-white border-0 shadow-2xl shadow-isep-primary/40">
         <DialogHeader className="text-center items-center">
           <DialogTitle className="text-3xl font-extrabold text-white mb-2">
-            Explorando tu Campus Virtual
+            Ingresa a tu Campus
           </DialogTitle>
           <p className="text-purple-200 text-lg max-w-md">
             Este video te guiará a través de nuestro campus virtual, mostrándote cómo navegar, encontrar tus cursos y aprovechar al máximo todas las herramientas a tu disposición. ¡Prepárate para dominar tu entorno de aprendizaje!

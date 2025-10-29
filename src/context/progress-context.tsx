@@ -4,14 +4,13 @@ import React, { createContext, useContext, useState, useMemo, ReactNode } from '
 
 // Define los pasos que el estudiante debe completar
 const OnboardingSteps = [
-  'welcomeVideo',
+  'welcome',
   'campusAccess',
-  'teachingPlan',
-  'teacherContact',
-  'contents',
-  'linksAndMaterials',
-  'surveyAndCertificate',
-  'billingModule'
+  'workshops',
+  'thesis',
+  'billing',
+  'rules',
+  'contactActivities'
 ] as const;
 
 export type Step = typeof OnboardingSteps[number];
