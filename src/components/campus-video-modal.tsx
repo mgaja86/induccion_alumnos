@@ -21,9 +21,9 @@ export const CampusVideoModal = ({ isOpen, onClose }: CampusVideoModalProps) => 
             Este video te guiará a través de nuestro campus virtual, mostrándote cómo navegar, encontrar tus cursos y aprovechar al máximo todas las herramientas a tu disposición. ¡Prepárate para dominar tu entorno de aprendizaje!
           </p>
         </DialogHeader>
-        <div className="relative w-full rounded-lg overflow-hidden my-4 ring-2 ring-isep-accent/50" style={{ paddingTop: '114.28%' /* Aspect ratio 800/700 */ }}>
+        <div className="w-full h-[75vh] rounded-lg overflow-hidden my-4 ring-2 ring-isep-accent/50">
           <iframe
-            className="absolute top-0 left-0 w-full h-full"
+            className="w-full h-full"
             src="https://embed.app.guidde.com/playbooks/4Yckvp57pHbu1r4BzqBaSF?mode=videoAndDoc"
             title="Ingresar Al Campus Universidadisep Paso A Paso"
             frameBorder="0"
