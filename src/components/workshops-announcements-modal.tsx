@@ -21,11 +21,17 @@ export const WorkshopsAnnouncementsModal = ({ isOpen, onClose }: WorkshopsAnnoun
             Aquí encontrarás información sobre masterclass, talleres, grabaciones y anuncios importantes para tu formación.
           </p>
         </DialogHeader>
-        <div className="relative aspect-video rounded-lg overflow-hidden my-4 ring-2 ring-isep-accent/50 bg-isep-dark/50 flex items-center justify-center">
-          <div className="text-center text-purple-200 p-4">
-            <p className="font-semibold text-lg">¡Próximamente!</p>
-            <p>Este video estará disponible mañana para que puedas continuar.</p>
-          </div>
+        <div className="relative aspect-video rounded-lg overflow-hidden my-4 ring-2 ring-isep-accent/50">
+          <iframe
+            className="absolute top-0 left-0 w-full h-full"
+            src="https://embed.app.guidde.com/playbooks/1iS9h4FYkmL54PcNGPX64X?mode=videoOnly"
+            title="Configura Talleres Y Tablón De Anuncios En Universidadisep"
+            frameBorder="0"
+            referrerPolicy="unsafe-url"
+            allowFullScreen={true}
+            allow="clipboard-write"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-scripts allow-forms allow-same-origin allow-presentation"
+          ></iframe>
         </div>
         <DialogFooter className="sm:justify-center">
           <Button 
