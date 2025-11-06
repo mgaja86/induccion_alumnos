@@ -31,8 +31,8 @@ export const CampusVideoSheet = ({ isOpen, onClose }: CampusVideoSheetProps) => 
         <div className="flex-grow mx-6 mb-4 rounded-lg overflow-hidden ring-2 ring-isep-accent/50">
           <iframe
             className="w-full h-full"
-            src="https://embed.app.guidde.com/playbooks/4Yckvp57pHbu1r4BzqBaSF?mode=videoAndDoc"
-            title="Ingresar Al Campus Universidadisep Paso A Paso"
+            src="https://embed.app.guidde.com/playbooks/iGB46DDFxowW31uQj1wcRC?mode=videoOnly"
+            title="Ingresar Al Campus Virtual De Universidadisep"
             frameBorder="0"
             allowFullScreen={true}
             allow="clipboard-write"
