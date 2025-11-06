@@ -10,6 +10,7 @@ import {
   Receipt, 
   HelpCircle, 
   MessageSquare,
+  FolderKanban,
   type LucideIcon 
 } from "lucide-react";
 import { ActionCard } from "@/components/action-card";
@@ -22,6 +23,7 @@ import { ThesisPracticesModal } from "@/components/thesis-practices-modal";
 import { BillingServicesModal } from "@/components/billing-services-modal";
 import { RulesDoubtsModal } from "@/components/rules-doubts-modal";
 import { ContactActivitiesModal } from "@/components/contact-activities-modal";
+import { DocumentFileModal } from "@/components/document-file-modal";
 import { FaqSection } from "@/components/faq-section";
 import { MasterCalendarSection } from "@/components/master-calendar-section";
 
@@ -50,6 +52,7 @@ function OnboardingDashboard() {
     { icon: Receipt, title: "FACTURAS Y SERVICIOS ADICIONALES", onClick: () => handleOpenModal('billing'), step: 'billing' },
     { icon: HelpCircle, title: "NORMATIVA Y MIS DUDAS", onClick: () => handleOpenModal('rules'), step: 'rules' },
     { icon: MessageSquare, title: "CONTACTO DOCENTE Y ACTIVIDADES EVALUATIVAS", onClick: () => handleOpenModal('contactActivities'), step: 'contactActivities' },
+    { icon: FolderKanban, title: "EXPEDIENTE DE DOCUMENTOS", onClick: () => handleOpenModal('documentFile'), step: 'documentFile' },
   ];
 
   return (
@@ -124,6 +127,7 @@ function OnboardingDashboard() {
       <BillingServicesModal isOpen={activeModal === 'billing'} onClose={handleCloseModal} />
       <RulesDoubtsModal isOpen={activeModal === 'rules'} onClose={handleCloseModal} />
       <ContactActivitiesModal isOpen={activeModal === 'contactActivities'} onClose={handleCloseModal} />
+      <DocumentFileModal isOpen={activeModal === 'documentFile'} onClose={handleCloseModal} />
     </>
   );
 }

@@ -10,7 +10,8 @@ const OnboardingSteps = [
   'thesis',
   'billing',
   'rules',
-  'contactActivities'
+  'contactActivities',
+  'documentFile'
 ] as const;
 
 export type Step = typeof OnboardingSteps[number];
