@@ -21,11 +21,17 @@ export const BillingServicesModal = ({ isOpen, onClose }: BillingServicesModalPr
             Aprende a gestionar tus pagos, consultar facturas y conocer los servicios adicionales que tenemos para ti.
           </p>
         </DialogHeader>
-        <div className="relative aspect-video rounded-lg overflow-hidden my-4 ring-2 ring-isep-accent/50 bg-isep-dark/50 flex items-center justify-center">
-          <div className="text-center text-purple-200 p-4">
-            <p className="font-semibold text-lg">¡Próximamente!</p>
-            <p>Este video estará disponible mañana para que puedas continuar.</p>
-          </div>
+        <div className="relative aspect-video rounded-lg overflow-hidden my-4 ring-2 ring-isep-accent/50">
+          <iframe
+            className="absolute top-0 left-0 w-full h-full"
+            src="https://embed.app.guidde.com/playbooks/hueNrzvV5Xhip98WVF4L9X?mode=videoOnly"
+            title="Configura Facturas Y Servicios Adicionales En Universidadisep"
+            frameBorder="0"
+            referrerPolicy="unsafe-url"
+            allowFullScreen={true}
+            allow="clipboard-write"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-scripts allow-forms allow-same-origin allow-presentation"
+          ></iframe>
         </div>
         <DialogFooter className="sm:justify-center">
           <Button 
