@@ -11,7 +11,7 @@ RUN npm install -g pnpm
 COPY package.json pnpm-lock.yaml* ./
 
 # Instalar dependencias de desarrollo para la compilación
-RUN pnpm install --frozen-lockfile --prod=false
+RUN pnpm install --prod=false
 
 
 # Etapa 2: Compilación de la aplicación
